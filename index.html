@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonnami | Indie Game Studio & Sage AI</title>
+    <title>Sonnami | Indie Game Studio & Tools</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -31,6 +31,7 @@
                     fontFamily: {
                         display: ['"Space Grotesk"', 'sans-serif'],
                         sans: ['Inter', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
                     },
                     animation: {
                         'glow': 'glow 3s ease-in-out infinite alternate',
@@ -162,14 +163,19 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#games" onclick="showView('studio')" class="text-sm font-semibold tracking-wider hover:text-primary transition-colors">GAMES</a>
-                    <a href="#skills" onclick="showView('studio')" class="text-sm font-semibold tracking-wider hover:text-primary transition-colors">SKILLS</a>
-                    <a href="#about" onclick="showView('studio')" class="text-sm font-semibold tracking-wider hover:text-primary transition-colors">ABOUT</a>
-                    <button onclick="showView('ai')" class="text-sm font-semibold tracking-wider text-primary hover:text-emerald-300 transition-colors flex items-center gap-1.5 focus:outline-none">
-                        <i class="far fa-comment-dots"></i> LAUNCH SAGE AI
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#games" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">GAMES</a>
+                    <a href="#skills" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">SKILLS</a>
+                    <a href="#about" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">ABOUT</a>
+                    
+                    <button onclick="showView('downloader')" class="text-xs font-semibold tracking-wider text-primary hover:text-emerald-300 transition-colors flex items-center gap-1.5 focus:outline-none uppercase">
+                        <i class="fas fa-download"></i> YT Downloader
                     </button>
-                    <a href="#contact" onclick="showView('studio')" class="btn-modern px-6 py-2 text-sm font-bold">CONTACT</a>
+                    <button onclick="showView('ai')" class="text-xs font-semibold tracking-wider text-primary hover:text-emerald-300 transition-colors flex items-center gap-1.5 focus:outline-none uppercase">
+                        <i class="far fa-comment-dots"></i> Sage AI
+                    </button>
+                    
+                    <a href="#contact" onclick="showView('studio')" class="btn-modern px-5 py-1.5 text-xs font-bold">CONTACT</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -182,18 +188,19 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/10 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/10 absolute w-full z-50">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#games" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">Games</a>
                 <a href="#skills" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">Skills</a>
                 <a href="#about" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">About</a>
-                <button onclick="showView('ai')" class="block w-full text-left px-3 py-2 text-base font-medium text-primary hover:bg-white/5 rounded-md focus:outline-none">Launch Sage AI</button>
+                <button onclick="showView('downloader')" class="block w-full text-left px-3 py-2 text-base font-medium text-primary hover:bg-white/5 rounded-md focus:outline-none">YT Downloader</button>
+                <button onclick="showView('ai')" class="block w-full text-left px-3 py-2 text-base font-medium text-primary hover:bg-white/5 rounded-md focus:outline-none">Sage AI</button>
                 <a href="#contact" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium text-primary border border-primary text-center mt-4 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN STUDIO VIEW -->
+    <!-- MAIN STUDIO HUB VIEW -->
     <div id="studio-view" class="transition-all duration-300">
         <!-- Hero Section -->
         <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -205,22 +212,22 @@
 
             <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
                 <div class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-6">
-                    Next-Gen Indie Game Development
+                    Next-Gen Indie Game Development & software Tools
                 </div>
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight leading-none text-white">
                     SONNAMI <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">STUDIO</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Crafting atmospheric experiences and mechanics-driven gameplay. We build digital worlds that captivate and challenge players.
+                    Crafting atmospheric experiences, mechanics-driven gameplay, and robust open-source software utilities.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="#games" class="btn-solid px-8 py-4 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2">
-                        <i class="fas fa-gamepad"></i> Explore Games
+                        <i class="fas fa-gamepad"></i> Explore Projects
                     </a>
-                    <button onclick="showView('ai')" class="btn-modern px-8 py-4 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2 focus:outline-none">
-                        <i class="far fa-comment-dots text-primary"></i> Launch Sage AI
+                    <button onclick="showView('downloader')" class="btn-modern px-8 py-4 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2 focus:outline-none">
+                        <i class="fas fa-download"></i> YT Downloader App
                     </button>
                 </div>
 
@@ -240,13 +247,13 @@
             </div>
         </section>
 
-        <!-- Games Portfolio Section -->
+        <!-- Projects Portfolio Section (Games + Tool) -->
         <section id="games" class="py-24 bg-dark relative z-10 border-t border-white/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center mb-16 reveal">
                     <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">OUR <span class="text-primary">PROJECTS</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Projects currently launched or in active development.</p>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Games and open-source utility software currently launched or under active maintenance.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -256,7 +263,6 @@
                         <div class="relative h-48 overflow-hidden bg-gray-800">
                             <div class="absolute inset-0 bg-gradient-to-br from-[#2a0845] to-[#6441A5] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
                             <div class="absolute inset-0 flex items-center justify-center text-4xl text-white/50"><i class="fas fa-space-shuttle"></i></div>
-                            
                             <div class="absolute top-4 right-4 bg-primary text-dark text-xs font-bold px-2 py-1 rounded">RELEASED</div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col">
@@ -285,7 +291,6 @@
                         <div class="relative h-48 overflow-hidden bg-gray-800">
                             <div class="absolute inset-0 bg-gradient-to-br from-[#134E5E] to-[#71B280] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
                             <div class="absolute inset-0 flex items-center justify-center text-4xl text-white/50"><i class="fas fa-ghost"></i></div>
-                            
                             <div class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">EARLY ACCESS</div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col">
@@ -308,40 +313,35 @@
                         </div>
                     </div>
 
-                    <!-- Game 3 (Prototype) -->
-                    <div class="game-card bg-card rounded-lg overflow-hidden border border-white/10 reveal group flex flex-col" style="transition-delay: 200ms;">
+                    <!-- Project 3: YouTube Downloader Web App -->
+                    <div class="game-card bg-card/90 rounded-lg overflow-hidden border border-primary/20 reveal group flex flex-col" style="transition-delay: 200ms;">
                         <div class="relative h-48 overflow-hidden bg-gray-800">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#800080] to-[#ffc0cb] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                            <div class="absolute inset-0 flex items-center justify-center text-4xl text-white/50"><i class="fas fa-chess-knight"></i></div>
-                            
-                            <div class="absolute top-4 right-4 bg-gray-600 text-white text-xs font-bold px-2 py-1 rounded">PROTOTYPE</div>
+                            <!-- Custom colored background matching the utility theme -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#065f46] to-[#022c22] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-4xl text-emerald-400/60"><i class="fas fa-download"></i></div>
+                            <div class="absolute top-4 right-4 bg-emerald-500 text-darker text-xs font-bold px-2 py-1 rounded">WEB APP & SCRIPT</div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Tactics Grid</h3>
+                            <h3 class="text-2xl font-bold text-white mb-2">Sonnami YT Downloader</h3>
                             <div class="flex gap-2 mb-4 flex-wrap">
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Godot</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">GDScript</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Strategy</span>
+                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">yt-dlp</span>
+                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Python</span>
+                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Bypass-Engine</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-6 flex-grow">A turn-based tactical RPG with a unique elemental combo system. Currently exploring core combat loops.</p>
+                            <p class="text-gray-400 text-sm mb-6 flex-grow">A powerful, zero-ad YouTube video extraction system. Bypasses standard bot blocks by overriding player clients (TV, Web) and purging cached files.</p>
                             
                             <div class="flex justify-between items-center mt-auto">
-                                <button onclick="openErrorPortal('devlog')" class="text-white hover:text-primary font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
-                                    Read Devlog <i class="fas fa-book text-xs"></i>
+                                <button onclick="showView('downloader')" class="text-primary hover:text-emerald-300 font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
+                                    Launch Web App <i class="fas fa-arrow-right text-xs"></i>
                                 </button>
                                 <div class="flex gap-2 text-gray-400">
-                                    <i class="fas fa-globe" title="Web"></i>
+                                    <i class="fab fa-python" title="Python Native Script"></i>
+                                    <i class="fas fa-globe" title="Web App"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
-                
-                <div class="text-center mt-12 reveal">
-                    <button onclick="openErrorPortal('itchio')" class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1 focus:outline-none">
-                        View all projects on Itch.io <i class="fas fa-external-link-alt text-xs"></i>
-                    </button>
                 </div>
             </div>
         </section>
@@ -377,11 +377,11 @@
                             </div>
                             <div>
                                 <div class="flex justify-between text-sm font-bold mb-2">
-                                    <span class="text-white flex items-center gap-2"><i class="fas fa-robot text-white"></i> Godot</span>
-                                    <span class="text-gray-400">60%</span>
+                                    <span class="text-white flex items-center gap-2"><i class="fab fa-python text-white"></i> Python / Open-Source Tools</span>
+                                    <span class="text-emerald-400">80%</span>
                                 </div>
                                 <div class="w-full bg-white/10 rounded-full h-2">
-                                    <div class="bg-gray-400 h-2 rounded-full" style="width: 60%"></div>
+                                    <div class="bg-emerald-400 h-2 rounded-full" style="width: 80%"></div>
                                 </div>
                             </div>
                         </div>
@@ -434,15 +434,15 @@
                                 Sonnami is an independent game development studio dedicated to creating immersive and innovative gaming experiences. Our journey started with a shared passion for systems design and interactive storytelling.
                             </p>
                             <p class="mt-4">
-                                When we're not tweaking variables or debugging physics, we focus on creating tight, responsive game loops. We believe that game feel is paramount—if moving a character or clicking a button isn't inherently satisfying, the rest doesn't matter.
+                                When we're not tweaking variables or debugging physics, we focus on creating tight, responsive game loops and building useful developer utilities. We believe that game feel and intuitive tool design are paramount.
                             </p>
                             <p class="mt-4">
-                                <strong>Specialties:</strong> Gameplay Programming, Rapid Prototyping, UI/UX Implementation, and Level Design.
+                                <strong>Specialties:</strong> Gameplay Programming, Open-Source Development, Rapid Prototyping, and UI/UX Implementation.
                             </p>
                         </div>
 
                         <div class="mt-8 flex gap-4">
-                            <a href="https://wa.me/233206933991" target="_blank" class="px-6 py-3 border border-primary/50 text-primary rounded-md hover:bg-primary hover:text-dark transition-colors flex items-center gap-2 font-semibold">
+                            <a href="https://wa.me/233206933991" target="_blank" class="px-6 py-3 border border-primary/50 text-primary rounded-md hover:bg-primary hover:text-dark transition-colors flex items-center gap-2 font-semibold font-sans text-sm">
                                 <i class="fab fa-whatsapp"></i> Message Us
                             </a>
                         </div>
@@ -580,7 +580,7 @@
                                 <i class="fas fa-folder-open"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-3">Sonnami Projects Expert</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Sage transforms into our specialized studio coordinator. Deep dive directly into details about <span class="text-emerald-400 font-semibold">Neon Drift</span>, <span class="text-emerald-400 font-semibold">Echoes of the Void</span>, and our Godot prototype, <span class="text-emerald-400 font-semibold">Tactics Grid</span>.</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Sage transforms into our specialized studio coordinator. Deep dive directly into details about <span class="text-emerald-400 font-semibold">Neon Drift</span>, <span class="text-emerald-400 font-semibold">Echoes of the Void</span>, and our web-based tools.</p>
                         </div>
                         <span class="text-emerald-400 font-bold text-sm flex items-center gap-2">
                             Initialize Project Expert Mode <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
@@ -595,7 +595,7 @@
                 </div>
             </div>
 
-            <!-- CHAT VIEW SECTION (Initially Hidden until mode is selected) -->
+            <!-- CHAT VIEW SECTION -->
             <div id="ai-chat-interface" class="w-full max-w-5xl hidden">
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex items-center gap-3">
@@ -676,8 +676,178 @@
         </div>
     </div>
 
+    <!-- DEDICATED YOUTUBE DOWNLOADER PAGE-VIEW -->
+    <div id="downloader-view" class="hidden min-h-screen pt-24 bg-darker relative z-10 transition-all duration-300">
+        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(#10B981 1.5px, transparent 1.5px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10">
+            <!-- Header Section -->
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-white/10 pb-6 mb-8 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold mb-2">
+                        <i class="fas fa-shield-alt"></i> Bypass-Engine Enabled
+                    </div>
+                    <h2 class="font-display font-bold text-3xl md:text-4xl text-white">YT DOWNLOADER <span class="text-primary">CORE</span></h2>
+                    <p class="text-gray-400 text-sm mt-1">High-performance video extraction utility powered by custom client-override protocols.</p>
+                </div>
+                <button onclick="showView('studio')" class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 uppercase">
+                    <i class="fas fa-arrow-left"></i> Return to Studio
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- LEFT PANEL: CONTROL PANEL -->
+                <div class="lg:col-span-5 bg-card/60 border border-white/10 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-sliders-h text-primary"></i> Extraction Settings
+                    </h3>
+                    
+                    <form id="dl-config-form" onsubmit="executeDownloadSimulation(event)" class="space-y-4">
+                        <!-- URL Input -->
+                        <div>
+                            <label for="video-url" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">YouTube Video URL</label>
+                            <input type="url" id="video-url" required placeholder="https://www.youtube.com/watch?v=..."
+                                class="w-full bg-darker border border-white/10 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm font-mono placeholder:text-gray-600">
+                        </div>
+
+                        <!-- Target Quality -->
+                        <div>
+                            <label for="video-quality" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resolution Format</label>
+                            <select id="video-quality" class="w-full bg-darker border border-white/10 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm font-sans">
+                                <option value="480">Standard 480p (Best compatible bypass size)</option>
+                                <option value="720">HD 720p (Direct client pull)</option>
+                                <option value="1080">Full HD 1080p (Requires post-muxing simulation)</option>
+                            </select>
+                        </div>
+
+                        <!-- Options switches mimicking python variables -->
+                        <div class="space-y-3 pt-2">
+                            <!-- Toggle 1: Restrict Filenames -->
+                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-semibold text-white">Restrict Filenames</span>
+                                    <span class="text-[10px] text-gray-500">Only letters, numbers and underscores</span>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="dl-opt-restrict" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+                                </label>
+                            </div>
+
+                            <!-- Toggle 2: Purge cache -->
+                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-semibold text-white">Purge Broken Sessions</span>
+                                    <span class="text-[10px] text-gray-500">Bypasses YouTube 403 cached bottlenecks</span>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="dl-opt-cache" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+                                </label>
+                            </div>
+
+                            <!-- Toggle 3: Override clients -->
+                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-semibold text-white">Client Override</span>
+                                    <span class="text-[10px] text-gray-500">Forces alternative "TV" & "Web" streaming backends</span>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="dl-opt-override" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="simulate-dl-btn" class="w-full btn-solid py-4 text-sm font-bold flex items-center justify-center gap-2">
+                            <i class="fas fa-play"></i> EXECUTE EXTRACTOR
+                        </button>
+                    </form>
+                </div>
+
+                <!-- RIGHT PANEL: TERMINAL OUTPUT & PY SCRIPT -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    
+                    <!-- TERMINAL SIMULATOR -->
+                    <div class="bg-black rounded-2xl border border-white/10 overflow-hidden shadow-2xl flex flex-col h-[300px]">
+                        <div class="bg-dark border-b border-white/10 px-4 py-2.5 flex justify-between items-center text-xs">
+                            <div class="flex items-center gap-2 font-mono text-gray-400">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                                <span class="ml-2">yt-dlp@sonnami-bypass-shell ~</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-primary font-bold">READY</span>
+                        </div>
+                        
+                        <div id="terminal-screen" class="p-5 font-mono text-xs overflow-y-auto flex-grow space-y-2 leading-relaxed text-emerald-300">
+                            <p class="text-gray-500">[SYSTEM INITIALIZED: Waiting for video link parameters...]</p>
+                        </div>
+                    </div>
+
+                    <!-- PYTHON SCRIPT CODE EXPORTER -->
+                    <div class="bg-card border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                <i class="fab fa-python text-emerald-400"></i> Local Python Script Exporter
+                            </h3>
+                            <button onclick="copyPythonCode()" class="text-xs text-primary hover:text-emerald-300 transition-colors flex items-center gap-1 focus:outline-none">
+                                <i class="far fa-copy"></i> Copy Script
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                            Prefer compiling natively on your own machine? Copy this custom implementation of <code class="font-mono bg-black/40 text-emerald-300 px-1 rounded">yt-dlp</code> designed to seamlessly bypass standard bot-blocking exceptions.
+                        </p>
+                        
+                        <!-- Custom styled Code Block -->
+                        <div class="relative bg-black rounded-xl border border-white/5 p-4 overflow-x-auto max-h-[220px]">
+                            <pre class="text-[11px] font-mono leading-relaxed text-slate-300 select-all" id="python-script-container"><code>import yt_dlp
+
+def download_youtube_video(video_url):
+    ydl_opts = {
+        # Keeps your 480p target
+        'format': 'bestvideo[height&lt;=480]+bestaudio/best[height&lt;=480]',
+        'restrictfilenames': True,
+        'outtmpl': '%(title)s_480p.%(ext)s',
+        
+        # --- THE FIXES FOR THE BOT BLOCK ---
+        # 1. Force yt-dlp to use alternative streaming clients (like TV)
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['tv', 'web'],
+            }
+        },
+        # 2. Prevent YouTube from serving broken cached sessions
+        'rm_cache_dir': True,
+        # 3. Use an alternative fallback downloader strategy if it hits a 403 error
+        'check_formats': True,
+    }
+    
+    print("\nStarting download... Overriding player clients to bypass block.")
+    
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([video_url])
+        print("\nDownload completed successfully!")
+    except Exception as e:
+        print(f"\nAn error occurred: {e}")
+
+if __name__ == "__main__":
+    url = input("Enter video url: ")
+    download_youtube_video(url)</code></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-white/10 relative z-10 text-center">
+    <footer class="bg-black py-8 border-t border-white/10 relative z-10 text-center animate-none">
         <div class="max-w-7xl mx-auto px-4">
             <div class="font-display font-bold text-2xl text-white/80 mb-4 uppercase">
                 Sonnami
@@ -773,7 +943,7 @@
         });
 
         // Close mobile menu on link click
-        menu.querySelectorAll('a').forEach(link => {
+        menu.querySelectorAll('a, button').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
@@ -837,12 +1007,15 @@
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#') && targetId.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
@@ -853,21 +1026,149 @@
         function showView(viewName) {
             const studioView = document.getElementById('studio-view');
             const aiView = document.getElementById('ai-view');
+            const downloaderView = document.getElementById('downloader-view');
+
+            // Hide all views initially
+            studioView.classList.add('hidden');
+            aiView.classList.add('hidden');
+            downloaderView.classList.add('hidden');
 
             if (viewName === 'ai') {
-                studioView.classList.add('hidden');
                 aiView.classList.remove('hidden');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                exitChatToSelection(); // Make sure the launch/configuration screen displays first
+                exitChatToSelection(); // Open launcher choice
+            } else if (viewName === 'downloader') {
+                downloaderView.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
-                aiView.classList.add('hidden');
                 studioView.classList.remove('hidden');
-                // Allow elements inside landing layout to trigger animation frames
-                reveal();
+                reveal(); // Recalculate portfolio reveal positions
             }
             
             // Auto close mobile menu if opened
             document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // ============================================
+        // YT DOWNLOADER SHELL SIMULATION
+        // ============================================
+        function executeDownloadSimulation(e) {
+            if (e) e.preventDefault();
+            const urlInput = document.getElementById('video-url');
+            const url = urlInput.value.trim();
+            if (!url) return;
+
+            const quality = document.getElementById('video-quality').value;
+            const optRestrict = document.getElementById('dl-opt-restrict').checked;
+            const optCache = document.getElementById('dl-opt-cache').checked;
+            const optOverride = document.getElementById('dl-opt-override').checked;
+
+            const terminal = document.getElementById('terminal-screen');
+            terminal.innerHTML = ""; // Clear log output
+
+            // Generate a random clean filename simulation based on prompt URL/Parameters
+            let simulatedFilename = "Video_Title";
+            try {
+                const tempUrl = new URL(url);
+                const videoId = tempUrl.searchParams.get("v") || "dQw4w9WgXcQ";
+                simulatedFilename = `youtube_stream_${videoId}`;
+            } catch(e) {
+                simulatedFilename = "extracted_stream_file";
+            }
+            
+            if (optRestrict) {
+                simulatedFilename = simulatedFilename.replace(/[^a-zA-Z0-9_]/g, "_") + `_${quality}p.mp4`;
+            } else {
+                simulatedFilename = simulatedFilename + ` @ ${quality}p.mp4`;
+            }
+
+            // Print sequential script execution mimicking native python console output
+            const simulatedLogs = [
+                { txt: `> Initializing yt-dlp simulation process...`, type: "sys" },
+                { txt: `> Target Video: ${url}`, type: "sys" },
+                { txt: `> Selected Target Quality Range: [height<=${quality}]`, type: "info" }
+            ];
+
+            if (optCache) {
+                simulatedLogs.push({ txt: `> rm_cache_dir: Purging cached session directories... Clean completed.`, type: "info" });
+            }
+            if (optOverride) {
+                simulatedLogs.push({ txt: `> Overriding player_client to alternate tv/web strategies...`, type: "warn" });
+                simulatedLogs.push({ txt: `> Emulating client signature block bypass... SUCCESS`, type: "success" });
+            } else {
+                simulatedLogs.push({ txt: `> [Warning] Client override disabled. Standard browser signatures might hit 403 Forbidden bottlenecks.`, type: "warn" });
+            }
+
+            simulatedLogs.push({ txt: `> Resolving direct download links...`, type: "sys" });
+            simulatedLogs.push({ txt: `> Connected to streaming nodes. Download started.`, type: "success" });
+
+            // Render static start steps
+            simulatedLogs.forEach(log => appendTerminalLine(log.txt, log.type));
+
+            // Start simulated file-download percent metrics
+            const downloadBtn = document.getElementById('simulate-dl-btn');
+            downloadBtn.disabled = true;
+            downloadBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Downloading...`;
+
+            let currentPercent = 0;
+            const progressLine = appendTerminalLine(`> [download]   0.0% of ~24.50MiB at 4.21MiB/s ETA 00:06`, "info");
+
+            const interval = setInterval(() => {
+                currentPercent += 10;
+                if (currentPercent <= 100) {
+                    const speed = (3.5 + Math.random() * 2).toFixed(2);
+                    progressLine.innerHTML = `> [download]  ${currentPercent.toFixed(1).padStart(5, ' ')}% of ~24.50MiB at ${speed}MiB/s ETA 00:0${Math.max(0, Math.ceil((100 - currentPercent) / 15))}s`;
+                    terminal.scrollTop = terminal.scrollHeight;
+                } else {
+                    clearInterval(interval);
+                    appendTerminalLine(`> [download] 100% of 24.50MiB in 00:06`, "success");
+                    appendTerminalLine(`> [ffmpeg] Merging audio and video tracks...`, "info");
+                    appendTerminalLine(`> Saved output: ${simulatedFilename}`, "success");
+                    appendTerminalLine(`\nDownload completed successfully inside Sonnami Local Sandbox Env!`, "success");
+                    
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = `<i class="fas fa-play"></i> EXECUTE EXTRACTOR`;
+                }
+            }, 600);
+        }
+
+        function appendTerminalLine(text, type) {
+            const terminal = document.getElementById('terminal-screen');
+            const line = document.createElement('p');
+            
+            if (type === "success") {
+                line.className = "text-emerald-400 font-mono";
+            } else if (type === "warn") {
+                line.className = "text-yellow-400 font-mono";
+            } else if (type === "sys") {
+                line.className = "text-blue-400 font-mono";
+            } else {
+                line.className = "text-slate-300 font-mono";
+            }
+
+            line.innerText = text;
+            terminal.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+            return line;
+        }
+
+        function copyPythonCode() {
+            const codeText = document.getElementById('python-script-container').innerText;
+            // Clipboard Copy API
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = codeText;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            // Trigger temporary visual notification on copy button
+            const copyBtn = document.querySelector('button[onclick="copyPythonCode()"]');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = `<i class="fas fa-check"></i> Copied!`;
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+            }, 2000);
         }
 
         // ============================================
@@ -1018,14 +1319,14 @@ Talk naturally, like an experienced software engineer or creative design lead. K
 Your specific operational directive is to answer questions related directly to our studio catalog, systems design, and mechanics:
 1. Neon Drift: A fast-paced cyberpunk racing arcade game built on Unity with C# (Released). Focuses on drifting physics, procedural track generation, synthwave aesthetics.
 2. Echoes of the Void: A deep-space psychological horror built on Unreal Engine 5 (Early Access). Focuses on resource management, player sanity mechanics, pathfinding in puzzle rooms.
-3. Tactics Grid: A turn-based tactical RPG prototype built on Godot (Prototype). Focuses on grids, elemental reaction combo loops.
+3. Sonnami YT Downloader: Our robust, open-source Python tool powered by yt-dlp that overrides player_client parameters to ['tv', 'web'] in order to bypass bot-blocking blocks, purges caches, and extracts standard 480p videos locally.
 Do not talk about general coding unless it is connected to explaining or detailing these projects or their mechanics. Keep responses engaging and studio-focused.`,
-                welcomeMessage: "Greetings! I am Sage, Sonnami Studio's specialized project assistant. I can guide you through the architectural designs of our games: Neon Drift, Echoes of the Void, or Tactics Grid. Which build are we inspecting today?",
+                welcomeMessage: "Greetings! I am Sage, Sonnami Studio's specialized project assistant. I can guide you through the architectural designs of our games: Neon Drift, Echoes of the Void, or our open-source python YouTube Downloader script. Which build are we inspecting today?",
                 sidebarDesc: "Our dedicated assistant loaded with contextual resources on Neon Drift, Echoes of the Void, and Tactics Grid.",
                 suggestions: [
+                    { label: "Bypass Bot blocks", prompt: "Explain how overriding player_client to ['tv', 'web'] helps bypass download bot blocks on YouTube." },
                     { label: "Inspect Neon Drift", prompt: "What is Neon Drift about and how was procedural track generation achieved?" },
-                    { label: "Unravel Echoes of the Void", prompt: "Explain the A* pathfinding approach used in Echoes of the Void." },
-                    { label: "Explore Tactics Grid", prompt: "How does the elemental combo system function in Tactics Grid?" }
+                    { label: "Unravel Echoes of the Void", prompt: "Explain the A* pathfinding approach used in Echoes of the Void." }
                 ]
             }
         };
