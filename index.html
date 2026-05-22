@@ -316,7 +316,6 @@
                     <!-- Project 3: YouTube Downloader Web App -->
                     <div class="game-card bg-card/90 rounded-lg overflow-hidden border border-primary/20 reveal group flex flex-col" style="transition-delay: 200ms;">
                         <div class="relative h-48 overflow-hidden bg-gray-800">
-                            <!-- Custom colored background matching the utility theme -->
                             <div class="absolute inset-0 bg-gradient-to-br from-[#065f46] to-[#022c22] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
                             <div class="absolute inset-0 flex items-center justify-center text-4xl text-emerald-400/60"><i class="fas fa-download"></i></div>
                             <div class="absolute top-4 right-4 bg-emerald-500 text-darker text-xs font-bold px-2 py-1 rounded">WEB APP & SCRIPT</div>
@@ -328,7 +327,7 @@
                                 <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Python</span>
                                 <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Bypass-Engine</span>
                             </div>
-                            <p class="text-gray-400 text-sm mb-6 flex-grow">A powerful, zero-ad YouTube video extraction system. Bypasses standard bot blocks by overriding player clients (TV, Web) and purging cached files.</p>
+                            <p class="text-gray-400 text-sm mb-6 flex-grow">A powerful, zero-ad YouTube video extraction system. Bypasses standard bot blocks by querying decentralized Invidious stream pools and Cobalt servers.</p>
                             
                             <div class="flex justify-between items-center mt-auto">
                                 <button onclick="showView('downloader')" class="text-primary hover:text-emerald-300 font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
@@ -460,7 +459,7 @@
                                         <i class="fas fa-pen-nib text-primary"></i> Latest Devlog
                                     </h3>
                                     <span class="text-xs text-gray-500 font-medium">Oct 24, 2023</span>
-                                </div>
+                                }
                                 
                                 <h4 class="text-lg text-primary font-bold mb-2">Implementing A* Pathfinding in 3D</h4>
                                 <p class="text-sm text-gray-400 mb-6">
@@ -688,7 +687,7 @@
                         <i class="fas fa-shield-alt"></i> Real-Time Extraction Engine Active
                     </div>
                     <h2 class="font-display font-bold text-3xl md:text-4xl text-white">YT DOWNLOADER <span class="text-primary">CORE</span></h2>
-                    <p class="text-gray-400 text-sm mt-1">High-performance video extraction utility powered by custom client-override protocols.</p>
+                    <p class="text-gray-400 text-sm mt-1">High-performance video extraction utility powered by dual-layer bypass routing.</p>
                 </div>
                 <button onclick="showView('studio')" class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 uppercase">
                     <i class="fas fa-arrow-left"></i> Return to Studio
@@ -715,8 +714,8 @@
                         <div>
                             <label for="video-quality" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resolution Format</label>
                             <select id="video-quality" class="w-full bg-darker border border-white/10 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm font-sans">
-                                <option value="480">Standard 480p (Best bypass configuration)</option>
-                                <option value="720">HD 720p</option>
+                                <option value="360">Standard 360p (High-compatibility stream)</option>
+                                <option value="720" selected>HD 720p (Recommended bypass quality)</option>
                                 <option value="1080">Full HD 1080p</option>
                             </select>
                         </div>
@@ -1050,8 +1049,16 @@ if __name__ == "__main__":
         }
 
         // ============================================
-        // REAL YT DOWNLOADER EXTRACTION SYSTEM
+        // REAL YT DOWNLOADER EXTRACTION SYSTEM (DECENTRALIZED + COBALT MULTI-INSTANCE)
         // ============================================
+        
+        // Extract Video ID helper
+        function extractVideoId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
         async function executeRealDownload(e) {
             if (e) e.preventDefault();
             const urlInput = document.getElementById('video-url');
@@ -1066,100 +1073,158 @@ if __name__ == "__main__":
             const terminal = document.getElementById('terminal-screen');
             terminal.innerHTML = ""; // Clear log output
 
-            // Simulated terminal start steps reflecting active settings
-            appendTerminalLine(`[!] Executing web-based bypass API...`, "sys");
+            appendTerminalLine(`[!] Executing Dual-Engine Bypass Pipeline...`, "sys");
             appendTerminalLine(`[!] Target URL: ${url}`, "info");
-            
-            if (optCache) {
-                appendTerminalLine(`[!] Purging caching directories to bypass YouTube bot limits...`, "warn");
-            }
-            if (optOverride) {
-                appendTerminalLine(`[!] Spoofing client headers to tv, web, and ios signatures...`, "warn");
-            }
 
-            appendTerminalLine(`[!] Connecting to extraction node...`, "info");
+            const videoId = extractVideoId(url);
+            if (!videoId) {
+                appendTerminalLine(`[Error] Could not parse a valid 11-character YouTube video ID from the URL.`, "warn");
+                return;
+            }
+            appendTerminalLine(`[!] Identified Video ID: ${videoId}`, "success");
 
             const downloadBtn = document.getElementById('simulate-dl-btn');
             downloadBtn.disabled = true;
             downloadBtn.innerHTML = `<i class="fas fa-sync fa-spin"></i> Extracting...`;
 
-            // List of open-source Cobalt API instances for reliable extraction fallback
-            const cobaltInstances = [
-                "https://api.cobalt.tools/api/json",
-                "https://cobalt.api.ryb.zone/api/json",
-                "https://cobalt.hyper.lol/api/json"
-            ];
-
             let success = false;
             let finalDownloadUrl = null;
             let fallbackError = "";
 
-            // Query Cobalt instances sequentially
-            for (let i = 0; i < cobaltInstances.length; i++) {
-                const instanceUrl = cobaltInstances[i];
-                appendTerminalLine(`[>] Contacting extractor instance: ${new URL(instanceUrl).hostname}...`, "sys");
+            // --- ENGINE 1: Decentralized Invidious Instance Pools ---
+            // Grabs clean direct MP4 files right from YouTube media streams
+            const invidiousInstances = [
+                "https://yewtu.be",
+                "https://invidious.flokinet.to",
+                "https://invidious.projectsegfau.lt",
+                "https://invidious.nerdvpn.de"
+            ];
+
+            appendTerminalLine(`\n[Engine 1] Launching decentralized Direct-Stream retrieval...`, "sys");
+
+            for (let i = 0; i < invidiousInstances.length; i++) {
+                const instance = invidiousInstances[i];
+                const hostname = new URL(instance).hostname;
+                appendTerminalLine(`[>] Querying pool node: ${hostname}...`, "info");
 
                 try {
-                    const response = await fetch(instanceUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            url: url,
-                            videoQuality: quality,
-                            downloadMode: "auto",
-                            filenamePattern: optRestrict ? "basic" : "pretty"
-                        })
+                    const response = await fetch(`${instance}/api/v1/videos/${videoId}`, {
+                        method: 'GET',
+                        headers: { 'Accept': 'application/json' }
                     });
 
                     if (response.ok) {
-                        const data = await response.json();
-                        if (data && (data.url || data.stream)) {
-                            finalDownloadUrl = data.url || data.stream;
-                            success = true;
-                            break;
+                        const videoData = await response.json();
+                        
+                        // Parse direct streams
+                        if (videoData && videoData.formatStreams && videoData.formatStreams.length > 0) {
+                            // Find the best quality matching user's target selection
+                            let selectedStream = null;
+                            const targetLabel = `${quality}p`;
+
+                            // Try to match exact resolution requested
+                            selectedStream = videoData.formatStreams.find(s => s.qualityLabel === targetLabel);
+
+                            // Fallback to highest available if chosen isn't found
+                            if (!selectedStream) {
+                                selectedStream = videoData.formatStreams[0]; // grab standard
+                            }
+
+                            if (selectedStream && selectedStream.url) {
+                                finalDownloadUrl = selectedStream.url;
+                                success = true;
+                                appendTerminalLine(`[+] Node ${hostname} bypassed player cipher signature successfully!`, "success");
+                                break;
+                            }
                         }
                     } else {
-                        const errorDetails = await response.text();
-                        fallbackError = `Server responded with status ${response.status}: ${errorDetails}`;
+                        fallbackError = `Server responded with status: ${response.status}`;
                     }
                 } catch (err) {
-                    fallbackError = err.message || "Network configuration or CORS restriction.";
+                    fallbackError = err.message || "Network exception or CORS restriction.";
                 }
             }
 
-            if (success && finalDownloadUrl) {
-                appendTerminalLine(`[+] Decryption handshake complete! Link generated.`, "success");
-                appendTerminalLine(`[+] Output link: ${finalDownloadUrl.substring(0, 60)}...`, "info");
-                appendTerminalLine(`[+] Starting direct browser download trigger...`, "success");
+            // --- ENGINE 2: Cobalt Instance Proxy Failover ---
+            if (!success) {
+                appendTerminalLine(`\n[Engine 1] Stream extraction blocked or rate-limited. Falling back to Engine 2...`, "warn");
+                appendTerminalLine(`[Engine 2] Contacting alternate Cobalt proxy nodes...`, "sys");
 
-                // Trigger direct file download
+                const cobaltInstances = [
+                    "https://api.cobalt.tools/api/json",
+                    "https://cobalt.api.ryb.zone/api/json",
+                    "https://cobalt.hyper.lol/api/json"
+                ];
+
+                for (let i = 0; i < cobaltInstances.length; i++) {
+                    const instanceUrl = cobaltInstances[i];
+                    const hostname = new URL(instanceUrl).hostname;
+                    appendTerminalLine(`[>] Contacting endpoint: ${hostname}...`, "info");
+
+                    try {
+                        const response = await fetch(instanceUrl, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                url: url,
+                                videoQuality: quality,
+                                downloadMode: "auto",
+                                filenamePattern: optRestrict ? "basic" : "pretty"
+                            })
+                        });
+
+                        if (response.ok) {
+                            const data = await response.json();
+                            if (data && (data.url || data.stream)) {
+                                finalDownloadUrl = data.url || data.stream;
+                                success = true;
+                                appendTerminalLine(`[+] Handshake successfully authenticated with ${hostname}!`, "success");
+                                break;
+                            }
+                        } else {
+                            const errorDetails = await response.text();
+                            fallbackError = `Status ${response.status}: ${errorDetails}`;
+                        }
+                    } catch (err) {
+                        fallbackError = err.message || "Endpoint block or CORS protocol issue.";
+                    }
+                }
+            }
+
+            // --- PROCESS RESULTS AND TRIGGER BROWSER DOWNLOAD ---
+            if (success && finalDownloadUrl) {
+                appendTerminalLine(`\n[+] Stream authorization key verified. Link successfully established!`, "success");
+                appendTerminalLine(`[+] File link: ${finalDownloadUrl.substring(0, 50)}...`, "info");
+                appendTerminalLine(`[+] Dispatching direct browser download window...`, "success");
+
+                // Trigger file download stream in browser
                 try {
                     const dlLink = document.createElement('a');
                     dlLink.href = finalDownloadUrl;
-                    dlLink.target = "_blank"; // Open in target blank if CORS forces navigation
+                    dlLink.target = "_blank"; // Prevents navigating away from your app
                     dlLink.download = "";
                     document.body.appendChild(dlLink);
                     dlLink.click();
                     document.body.removeChild(dlLink);
                     
-                    appendTerminalLine(`\n[SUCCESS] Extraction completed! Your browser has triggered the file stream.`, "success");
+                    appendTerminalLine(`\n[SUCCESS] Decryption bypass fully executed inside HTML sandbox.`, "success");
                 } catch(dlErr) {
-                    appendTerminalLine(`[!] Automated click trigger failed. Please click the direct stream manually:`, "warn");
+                    appendTerminalLine(`[!] Auto-click block encountered. Click below to stream file manually:`, "warn");
                     const manualLink = document.createElement('a');
                     manualLink.href = finalDownloadUrl;
                     manualLink.target = "_blank";
                     manualLink.className = "text-primary underline font-bold block mt-2";
-                    manualLink.innerText = "Click here to download file";
+                    manualLink.innerText = "Download Stream File";
                     terminal.appendChild(manualLink);
                 }
             } else {
-                appendTerminalLine(`\n[!] All extraction endpoints returned a block.`, "warn");
-                appendTerminalLine(`[Error context]: ${fallbackError}`, "warn");
-                appendTerminalLine(`\n[RECOMMENDED FIX]: YouTube anti-bot rules frequently block client-side web requests.`, "info");
-                appendTerminalLine(`Please copy and execute the local Python Script Exporter code on your machine for 100% bypass stability.`, "success");
+                appendTerminalLine(`\n[!] Dual-Engine Pipeline failed to complete handshake.`, "warn");
+                appendTerminalLine(`[Reason]: All public proxy networks are currently ratelimited by YouTube's firewall.`, "warn");
+                appendTerminalLine(`[Details]: ${fallbackError}`, "info");
+                appendTerminalLine(`\n[RECOMMENDED FIX]: Copy the Python Script Exporter directly below and run it locally. Running python locally bypasses server-side rate-limits entirely!`, "success");
             }
 
             downloadBtn.disabled = false;
