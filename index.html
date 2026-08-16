@@ -1,32 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bismark Nana Konadu  | Indie Game Developer At Sonnami Studios</title>
+    <title>Bismarck Nana Konadu | Sonnami Co-Founder & Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bismarck Nana Konadu, Co-Founder of Sonnami. Indie game developer, software engineer, and creator of Neon Drift, Echoes of the Void, and open-source tools.">
+    <meta name="keywords" content="Bismarck Nana Konadu, Sonnami, Sonnami Co-Founder, indie game developer, game development, software engineer, Neon Drift, Echoes of the Void">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bismarck Nana Konadu | Sonnami Co-Founder & Developer">
+    <meta property="og:description" content="Personal portfolio of Bismarck Nana Konadu, Co-Founder of Sonnami Studios. Game developer, software engineer, and open-source contributor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sonnamidevs.github.io/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bismarck Nana Konadu | Sonnami Co-Founder">
+    <meta name="twitter:description" content="Personal portfolio of Bismarck Nana Konadu, Co-Founder of Sonnami Studios.">
+    
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bismarck Nana Konadu",
+      "alternateName": "sonnamidevs",
+      "jobTitle": "Co-Founder & Lead Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sonnami Studios"
+      },
+      "url": "https://sonnamidevs.github.io/",
+      "sameAs": [
+        "https://github.com/sonnamidevs",
+        "https://twitter.com/sonnamidevs",
+        "https://instagram.com/sonnamidevs",
+        "https://linkedin.com/in/sonnamidevs"
+      ],
+      "knowsAbout": [
+        "Game Development",
+        "Unity",
+        "Unreal Engine",
+        "C#",
+        "Python",
+        "Software Engineering",
+        "Indie Game Development"
+      ]
+    }
+    </script>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
-    <script>66
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#10B981', // Emerald green
-                        secondary: '#047857', // Dark green
-                        dark: '#0f172a', // Slate 900
-                        darker: '#020617', // Slate 950
-                        card: '#1e293b', // Slate 800
-                        gray: {
-                            400: '#9ca3af',
-                            300: '#d1d5db',
-                        }
+                        // Premium Dark Theme - Deep Navy & Warm Accents
+                        navy: {
+                            50: '#e8edf5',
+                            100: '#c5d1e6',
+                            200: '#9eb2d4',
+                            300: '#778fc1',
+                            400: '#5573b3',
+                            500: '#3458a5',
+                            600: '#2a4a8c',
+                            700: '#1f3a6e',
+                            800: '#152a50',
+                            900: '#0a1a32',
+                            950: '#050f1f'
+                        },
+                        accent: {
+                            light: '#f7c948',
+                            DEFAULT: '#e8a838',
+                            dark: '#c98f2e'
+                        },
+                        cream: '#f5f0e8',
+                        dark: '#0a0f1a',
+                        card: '#111827',
+                        cardHover: '#1a2332'
                     },
                     fontFamily: {
                         display: ['"Space Grotesk"', 'sans-serif'],
@@ -34,17 +94,23 @@
                         mono: ['"Fira Code"', 'monospace'],
                     },
                     animation: {
-                        'glow': 'glow 3s ease-in-out infinite alternate',
                         'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'border-glow': 'borderGlow 3s ease-in-out infinite',
                     },
                     keyframes: {
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px rgba(16, 185, 129, 0.2)' },
-                            '100%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }
-                        },
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' }
+                            '50%': { transform: 'translateY(-12px)' }
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        },
+                        borderGlow: {
+                            '0%, 100%': { borderColor: 'rgba(232, 168, 56, 0.2)' },
+                            '50%': { borderColor: 'rgba(232, 168, 56, 0.6)' }
                         }
                     }
                 }
@@ -54,1402 +120,735 @@
 
     <style>
         body {
-            background-color: #020617;
-            color: #f8fafc;
+            background: #0a0f1a;
+            color: #e8edf5;
             overflow-x: hidden;
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0f1a; }
+        ::-webkit-scrollbar-thumb { 
+            background: #e8a838; 
+            border-radius: 3px;
         }
-        ::-webkit-scrollbar-track {
-            background: #020617;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #10B981;
+        ::-webkit-scrollbar-thumb:hover { background: #f7c948; }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #e8a838 0%, #f7c948 50%, #e8a838 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 4s ease infinite;
         }
 
-        /* Modern Glow Hover Effect */
+        /* Subtle Glow Effects */
+        .glow-hover {
+            transition: all 0.3s ease;
+        }
         .glow-hover:hover {
-            color: #10B981;
-            text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+            color: #e8a838;
+            text-shadow: 0 0 20px rgba(232, 168, 56, 0.3);
+        }
+
+        /* Modern Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #e8a838, #c98f2e);
+            color: #0a0f1a;
+            border: none;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(232, 168, 56, 0.3);
         }
 
-        /* Button styling */
-        .btn-modern {
-            position: relative;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid #10B981;
-            color: #10B981;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .btn-outline {
+            background: transparent;
+            color: #e8a838;
+            border: 1.5px solid #e8a838;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            border-radius: 6px;
-            overflow: hidden;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .btn-outline:hover {
+            background: rgba(232, 168, 56, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(232, 168, 56, 0.15);
         }
 
-        .btn-modern:hover {
-            background: #10B981;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
-            color: #020617;
+        /* Card Styles */
+        .modern-card {
+            background: linear-gradient(145deg, #111827, #0d1420);
+            border: 1px solid rgba(232, 168, 56, 0.08);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modern-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(232, 168, 56, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-        .btn-solid {
-            background: #10B981;
-            color: #020617;
-            border: 1px solid #10B981;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .btn-solid:hover {
-            background: rgba(16, 185, 129, 0.8);
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+        /* Grid Background */
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(232, 168, 56, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(232, 168, 56, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
 
-        /* Game Card Hover Effect */
-        .game-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 12px;
-        }
-        .game-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
-        }
-
-        /* Section Reveal Animation */
+        /* Section Reveal */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Retro scanline & flicker for error states */
-        .crt-effect {
-            animation: flicker 0.15s infinite;
+        /* Profile Image Placeholder */
+        .profile-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e8a838, #c98f2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #0a0f1a;
+            border: 4px solid rgba(232, 168, 56, 0.3);
+            box-shadow: 0 0 60px rgba(232, 168, 56, 0.15);
         }
-        @keyframes flicker {
-            0% { opacity: 0.98; }
-            50% { opacity: 1; }
-            100% { opacity: 0.99; }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(232, 168, 56, 0.12);
+            color: #e8a838;
+            border: 1px solid rgba(232, 168, 56, 0.15);
         }
-        .color-block {
-            height: 12px;
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: pulse 2s infinite;
         }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Skill Tags */
+        .skill-tag {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: rgba(232, 168, 56, 0.08);
+            color: #c5d1e6;
+            border: 1px solid rgba(232, 168, 56, 0.1);
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            background: rgba(232, 168, 56, 0.15);
+            border-color: rgba(232, 168, 56, 0.3);
+            color: #f7c948;
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            background: #0d1420;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(232, 168, 56, 0.08);
+        }
+
+        /* Social Icon Hover */
+        .social-link {
+            transition: all 0.3s ease;
+            color: #778fc1;
+        }
+        .social-link:hover {
+            color: #e8a838;
+            transform: translateY(-3px);
+        }
+
+        /* Project Card Gradient Overlays */
+        .project-overlay-1 {
+            background: linear-gradient(135deg, #1a2332, #0d1420);
+        }
+        .project-overlay-2 {
+            background: linear-gradient(135deg, #0d1420, #1a2332);
+        }
+        .project-overlay-3 {
+            background: linear-gradient(135deg, #1a1a2e, #0d1420);
+        }
+
+        /* Terminal */
+        .terminal {
+            background: #050a12;
+            border: 1px solid rgba(232, 168, 56, 0.08);
+            border-radius: 12px;
+        }
+        .terminal-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .terminal-dot-red { background: #ff5f56; }
+        .terminal-dot-yellow { background: #ffbd2e; }
+        .terminal-dot-green { background: #27c93f; }
     </style>
 </head>
-<body class="font-sans antialiased text-gray-300 selection:bg-primary selection:text-dark">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-40 top-0 bg-darker/90 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#home" onclick="showView('studio')" class="font-display font-bold text-2xl tracking-tighter text-white glow-hover uppercase">
-                        Sonnami
-                    </a>
-                </div>
+                <a href="#home" class="font-display font-bold text-xl tracking-tight text-white glow-hover">
+                    <span class="gradient-text">Bismarck</span>
+                    <span class="text-gray-400 font-light">.</span>
+                </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#games" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">GAMES</a>
-                    <a href="#skills" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">SKILLS</a>
-                    <a href="#about" onclick="showView('studio')" class="text-xs font-semibold tracking-wider hover:text-primary transition-colors">ABOUT</a>
-                    
-                    <button onclick="showView('downloader')" class="text-xs font-semibold tracking-wider text-primary hover:text-emerald-300 transition-colors flex items-center gap-1.5 focus:outline-none uppercase">
-                        <i class="fas fa-download"></i> YT Downloader
-                    </button>
-                    <button onclick="showView('ai')" class="text-xs font-semibold tracking-wider text-primary hover:text-emerald-300 transition-colors flex items-center gap-1.5 focus:outline-none uppercase">
-                        <i class="far fa-comment-dots"></i> Sage AI
-                    </button>
-                    
-                    <a href="#contact" onclick="showView('studio')" class="btn-modern px-5 py-1.5 text-xs font-bold">CONTACT</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
+                    <a href="#skills" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Skills</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+                    <a href="#contact" class="btn-primary px-5 py-2 text-sm">Let's Talk</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/10 absolute w-full z-50">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#games" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">Games</a>
-                <a href="#skills" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">Skills</a>
-                <a href="#about" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-white/5 rounded-md">About</a>
-                <button onclick="showView('downloader')" class="block w-full text-left px-3 py-2 text-base font-medium text-primary hover:bg-white/5 rounded-md focus:outline-none">YT Downloader</button>
-                <button onclick="showView('ai')" class="block w-full text-left px-3 py-2 text-base font-medium text-primary hover:bg-white/5 rounded-md focus:outline-none">Sage AI</button>
-                <a href="#contact" onclick="showView('studio')" class="block px-3 py-2 text-base font-medium text-primary border border-primary text-center mt-4 rounded-md">Contact</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#about" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#projects" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+                <a href="#skills" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">Skills</a>
+                <a href="#contact" onclick="closeMobileMenu()" class="block btn-primary text-center px-4 py-2 text-sm">Let's Talk</a>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN STUDIO HUB VIEW -->
-    <div id="studio-view" class="transition-all duration-300">
-        <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            <!-- Background Elements -->
-            <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(#10B981 1.5px, transparent 1.5px); background-size: 40px 40px;"></div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#e8a838]/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#e8a838]/3 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <!-- Ambient Light -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                <div class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-6">
-                    Next-Gen Indie Game Development & software Tools
-                </div>
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight leading-none text-white">
-                    SONNAMI <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">STUDIO</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Crafting atmospheric experiences, mechanics-driven gameplay, and robust open-source software utilities.
-                </p>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#games" class="btn-solid px-8 py-4 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2">
-                        <i class="fas fa-gamepad"></i> Explore Projects
-                    </a>
-                    <button onclick="showView('downloader')" class="btn-modern px-8 py-4 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2 focus:outline-none">
-                        <i class="fas fa-download"></i> YT Downloader App
-                    </button>
-                </div>
-
-                <!-- Social Links -->
-                <div class="mt-16 flex justify-center space-x-6">
-                    <button onclick="openErrorPortal('itchio')" class="text-gray-400 hover:text-primary text-2xl transition-colors focus:outline-none"><i class="fab fa-itch-io"></i></button>
-                    <button onclick="openErrorPortal('github')" class="text-gray-400 hover:text-white text-2xl transition-colors focus:outline-none"><i class="fab fa-github"></i></button>
-                    <button onclick="openErrorPortal('twitter')" class="text-gray-400 hover:text-[#1DA1F2] text-2xl transition-colors focus:outline-none"><i class="fab fa-twitter"></i></button>
-                    <button onclick="openErrorPortal('youtube')" class="text-gray-400 hover:text-[#FF0000] text-2xl transition-colors focus:outline-none"><i class="fab fa-youtube"></i></button>
-                </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center">
-                <span class="text-xs text-gray-500 mb-2 font-medium tracking-widest uppercase">Scroll</span>
-                <i class="fas fa-arrow-down text-primary"></i>
-            </div>
-        </section>
-
-        <!-- Projects Portfolio Section (Games + Tool) -->
-        <section id="games" class="py-24 bg-dark relative z-10 border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center mb-16 reveal">
-                    <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">OUR <span class="text-primary">PROJECTS</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Games and open-source utility software currently launched or under active maintenance.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Left: Text Content -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="status-badge mb-6">
+                        <span class="status-dot"></span>
+                        Available for collaboration
+                    </div>
                     
-                    <!-- Game 1 -->
-                    <div class="game-card bg-card rounded-lg overflow-hidden border border-white/10 reveal group flex flex-col">
-                        <div class="relative h-48 overflow-hidden bg-gray-800">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#2a0845] to-[#6441A5] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                            <div class="absolute inset-0 flex items-center justify-center text-4xl text-white/50"><i class="fas fa-space-shuttle"></i></div>
-                            <div class="absolute top-4 right-4 bg-primary text-dark text-xs font-bold px-2 py-1 rounded">RELEASED</div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Neon Drift</h3>
-                            <div class="flex gap-2 mb-4 flex-wrap">
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Unity</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">C#</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Arcade</span>
-                            </div>
-                            <p class="text-gray-400 text-sm mb-6 flex-grow">A fast-paced cyberpunk racing game with synthwave aesthetics. Master drifting mechanics to survive endless procedurally generated tracks.</p>
-                            
-                            <div class="flex justify-between items-center mt-auto">
-                                <button onclick="openErrorPortal('itchio')" class="text-primary hover:text-white font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
-                                    Play on Itch.io <i class="fas fa-arrow-right text-xs"></i>
-                                </button>
-                                <div class="flex gap-2 text-gray-400">
-                                    <i class="fab fa-windows" title="Windows"></i>
-                                    <i class="fab fa-apple" title="macOS"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Game 2 -->
-                    <div class="game-card bg-card rounded-lg overflow-hidden border border-white/10 reveal group flex flex-col" style="transition-delay: 100ms;">
-                        <div class="relative h-48 overflow-hidden bg-gray-800">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#134E5E] to-[#71B280] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                            <div class="absolute inset-0 flex items-center justify-center text-4xl text-white/50"><i class="fas fa-ghost"></i></div>
-                            <div class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">EARLY ACCESS</div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Echoes of the Void</h3>
-                            <div class="flex gap-2 mb-4 flex-wrap">
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Unreal Engine 5</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Horror</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">3D</span>
-                            </div>
-                            <p class="text-gray-400 text-sm mb-6 flex-grow">A psychological survival horror set in an abandoned deep-space mining facility. Manage resources and sanity.</p>
-                            
-                            <div class="flex justify-between items-center mt-auto">
-                                <button onclick="openErrorPortal('steam')" class="text-secondary hover:text-white font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
-                                    View on Steam <i class="fas fa-arrow-right text-xs"></i>
-                                </button>
-                                <div class="flex gap-2 text-gray-400">
-                                    <i class="fab fa-windows" title="Windows"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: YouTube Downloader Web App -->
-                    <div class="game-card bg-card/90 rounded-lg overflow-hidden border border-primary/20 reveal group flex flex-col" style="transition-delay: 200ms;">
-                        <div class="relative h-48 overflow-hidden bg-gray-800">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#065f46] to-[#022c22] opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
-                            <div class="absolute inset-0 flex items-center justify-center text-4xl text-emerald-400/60"><i class="fas fa-download"></i></div>
-                            <div class="absolute top-4 right-4 bg-emerald-500 text-darker text-xs font-bold px-2 py-1 rounded">WEB APP & SCRIPT</div>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Sonnami YT Downloader</h3>
-                            <div class="flex gap-2 mb-4 flex-wrap">
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">yt-dlp</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Python</span>
-                                <span class="text-xs font-semibold px-2 py-1 bg-white/10 text-gray-300 rounded">Bypass-Engine</span>
-                            </div>
-                            <p class="text-gray-400 text-sm mb-6 flex-grow">A powerful, zero-ad YouTube video extraction system. Bypasses standard bot blocks by querying decentralized Invidious stream pools and Cobalt servers.</p>
-                            
-                            <div class="flex justify-between items-center mt-auto">
-                                <button onclick="showView('downloader')" class="text-primary hover:text-emerald-300 font-bold text-sm flex items-center gap-1 transition-colors focus:outline-none">
-                                    Launch Web App <i class="fas fa-arrow-right text-xs"></i>
-                                </button>
-                                <div class="flex gap-2 text-gray-400">
-                                    <i class="fab fa-python" title="Python Native Script"></i>
-                                    <i class="fas fa-globe" title="Web App"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-darker relative z-10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6">
+                        <span class="text-white">Hi, I'm</span><br>
+                        <span class="gradient-text">Bismarck Nana Konadu</span>
+                    </h1>
                     
-                    <div class="reveal">
-                        <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-6">TECH <span class="text-primary">STACK</span></h2>
-                        <p class="text-gray-400 mb-8 text-lg">Our primary toolset for bringing ideas to life. We believe in choosing the right tool for the job, whether it's a high-fidelity 3D experience or a lightweight 2D game.</p>
-                        
-                        <!-- Engine Stats -->
-                        <div class="space-y-6">
-                            <div>
-                                <div class="flex justify-between text-sm font-bold mb-2">
-                                    <span class="text-white flex items-center gap-2"><i class="fab fa-unity text-white"></i> Unity / C#</span>
-                                    <span class="text-primary">90%</span>
-                                </div>
-                                <div class="w-full bg-white/10 rounded-full h-2">
-                                    <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-bold mb-2">
-                                    <span class="text-white flex items-center gap-2"><i class="fas fa-cube text-white"></i> Unreal Engine / Blueprints</span>
-                                    <span class="text-secondary">75%</span>
-                                </div>
-                                <div class="w-full bg-white/10 rounded-full h-2">
-                                    <div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm font-bold mb-2">
-                                    <span class="text-white flex items-center gap-2"><i class="fab fa-python text-white"></i> Python / Open-Source Tools</span>
-                                    <span class="text-emerald-400">80%</span>
-                                </div>
-                                <div class="w-full bg-white/10 rounded-full h-2">
-                                    <div class="bg-emerald-400 h-2 rounded-full" style="width: 80%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+                        Co-Founder of <span class="text-white font-semibold">Sonnami Studios</span> · 
+                        Indie Game Developer · Software Engineer · Open-Source Creator
+                    </p>
 
-                    <!-- Tools Grid -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 reveal" style="transition-delay: 200ms;">
-                        <!-- Tool cards -->
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fab fa-git-alt text-3xl text-[#F05032] mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">Git</h4>
-                        </div>
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fas fa-cube text-3xl text-[#EA8220] mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">Blender</h4>
-                        </div>
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fas fa-image text-3xl text-[#31A8FF] mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">Photoshop</h4>
-                        </div>
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fas fa-code text-3xl text-[#007ACC] mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">VS Code</h4>
-                        </div>
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fas fa-music text-3xl text-green-400 mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">FMOD</h4>
-                        </div>
-                        <div class="bg-card border border-white/5 p-4 rounded text-center hover:border-primary transition-colors group">
-                            <i class="fas fa-project-diagram text-3xl text-[#0052CC] mb-2 group-hover:scale-110 transition-transform"></i>
-                            <h4 class="text-white text-sm font-bold">Jira/Trello</h4>
-                        </div>
-                    </div>
+                    <p class="text-base text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10">
+                        Crafting immersive gaming experiences and building powerful developer tools. 
+                        I turn complex ideas into polished, playable realities.
+                    </p>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24 bg-dark relative z-10 border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Profile text -->
-                    <div class="lg:col-span-7 reveal">
-                        <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-6">ABOUT <span class="text-primary">SONNAMI</span></h2>
-                        
-                        <div class="prose prose-invert prose-lg text-gray-400">
-                            <p>
-                                Sonnami is an independent game development studio dedicated to creating immersive and innovative gaming experiences. Our journey started with a shared passion for systems design and interactive storytelling.
-                            </p>
-                            <p class="mt-4">
-                                When we're not tweaking variables or debugging physics, we focus on creating tight, responsive game loops and building useful developer utilities. We believe that game feel and intuitive tool design are paramount.
-                            </p>
-                            <p class="mt-4">
-                                <strong>Specialties:</strong> Gameplay Programming, Open-Source Development, Rapid Prototyping, and UI/UX Implementation.
-                            </p>
-                        </div>
-
-                        <div class="mt-8 flex gap-4">
-                            <a href="https://wa.me/233206933991" target="_blank" class="px-6 py-3 border border-primary/50 text-primary rounded-md hover:bg-primary hover:text-dark transition-colors flex items-center gap-2 font-semibold font-sans text-sm">
-                                <i class="fab fa-whatsapp"></i> Message Us
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Latest Devlog -->
-                    <div class="lg:col-span-5 reveal" style="transition-delay: 200ms;">
-                        <div class="bg-card border border-white/10 p-6 rounded-xl relative overflow-hidden h-full shadow-lg">
-                            <!-- Decorative bg -->
-                            <i class="fas fa-terminal absolute -bottom-10 -right-10 text-9xl text-white/5"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                                        <i class="fas fa-pen-nib text-primary"></i> Latest Devlog
-                                    </h3>
-                                    <span class="text-xs text-gray-500 font-medium">Oct 24, 2023</span>
-                                }
-                                
-                                <h4 class="text-lg text-primary font-bold mb-2">Implementing A* Pathfinding in 3D</h4>
-                                <p class="text-sm text-gray-400 mb-6">
-                                    A dive into how I optimized enemy AI navigation for 'Echoes of the Void' using a custom grid approach instead of NavMeshes for specific puzzle rooms...
-                                </p>
-                                
-                                <button onclick="openErrorPortal('devlog')" class="text-white hover:text-secondary text-sm font-bold transition-colors flex items-center gap-2 focus:outline-none">
-                                    Read Full Post <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-darker relative z-10 border-t border-white/5">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center mb-12 reveal">
-                    <h2 class="font-display font-bold text-3xl md:text-5xl text-white mb-4">GET IN <span class="text-primary">TOUCH</span></h2>
-                    <p class="text-gray-400">Available for freelance work, game jams, or just talking about game design.</p>
-                    
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-                        <a href="https://wa.me/233206933991" target="_blank" class="flex items-center gap-3 text-lg text-white hover:text-[#25D366] transition-colors bg-card px-6 py-3 rounded-full border border-white/10 hover:border-[#25D366]/50 shadow-lg w-full sm:w-auto justify-center">
-                            <i class="fab fa-whatsapp text-2xl text-[#25D366]"></i> WhatsApp: 0206933991
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="#projects" class="btn-primary px-8 py-3.5 text-base inline-flex items-center gap-2">
+                            <i class="fas fa-gamepad"></i> View My Work
                         </a>
-                        <a href="tel:0206933991" class="flex items-center gap-3 text-lg text-white hover:text-primary transition-colors bg-card px-6 py-3 rounded-full border border-white/10 hover:border-primary/50 shadow-lg w-full sm:w-auto justify-center">
-                            <i class="fas fa-phone-alt text-xl text-primary"></i> Call: 0206933991
+                        <a href="#contact" class="btn-outline px-8 py-3.5 text-base inline-flex items-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Get in Touch
                         </a>
                     </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center lg:justify-start gap-5 mt-10">
+                        <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-youtube"></i></a>
+                        <a href="https://sonnamidevs.itch.io" target="_blank" class="social-link text-xl"><i class="fab fa-itch-io"></i></a>
+                    </div>
                 </div>
 
-                <div class="bg-card border border-white/10 rounded-xl p-8 reveal shadow-2xl">
-                    <!-- Custom Form Element (Visual only, simulates submission) -->
-                    <form id="contactForm" onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-6">
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">NAME</label>
-                                <input type="text" id="name" required
-                                    class="w-full bg-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-sans">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">EMAIL ADDRESS</label>
-                                <input type="email" id="email" required
-                                    class="w-full bg-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-sans">
-                            </div>
+                <!-- Right: Profile Image -->
+                <div class="flex-shrink-0">
+                    <div class="relative">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-400 mb-2">SUBJECT</label>
-                            <select id="subject" class="w-full bg-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-sans appearance-none">
-                                <option value="freelance">Freelance Inquiry</option>
-                                <option value="collab">Collaboration / Game Jam</option>
-                                <option value="support">Game Support</option>
-                                <option value="other">Just saying Hi</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">MESSAGE</label>
-                            <textarea id="message" rows="5" required
-                                class="w-full bg-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-sans resize-none"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full btn-solid px-8 py-4 text-lg font-bold">
-                            <i class="fas fa-paper-plane mr-2"></i> SEND MESSAGE
-                        </button>
-                    </form>
-
-                    <!-- Success Message Container -->
-                    <div id="successMessage" class="hidden mt-6 p-4 bg-primary/10 border border-primary text-primary rounded-md text-center">
-                        <i class="fas fa-check-circle mr-2"></i> Message received. We will respond to your comms shortly.
+                        <!-- Decorative rings -->
+                        <div class="absolute -inset-4 border-2 border-[#e8a838]/10 rounded-full animate-spin-slow" style="animation-duration: 20s;"></div>
+                        <div class="absolute -inset-8 border border-[#e8a838]/5 rounded-full" style="animation-duration: 25s;"></div>
                     </div>
                 </div>
 
             </div>
-        </section>
-    </div>
-
-    <!-- DEDICATED SAGE AI PAGE-VIEW -->
-    <div id="ai-view" class="hidden min-h-screen pt-24 bg-darker relative z-10 transition-all duration-300">
-        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(#10B981 1.5px, transparent 1.5px); background-size: 30px 30px;"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10 flex flex-col items-center">
-            
-            <!-- SELECTION LAUNCH SCREEN -->
-            <div id="ai-launcher-screen" class="w-full max-w-4xl text-center mt-6">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold mb-6">
-                    <i class="far fa-comment-dots"></i> SAGE CHAT DEPLOYMENT CENTER
-                </div>
-                <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">CHOOSE YOUR <span class="text-primary">SAGE MODE</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto mb-12">Configure your Sage companion persona before initializing the session. Each mode adapts Sage's specialty and focus.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <!-- Option 1: Generalist AI -->
-                    <button onclick="launchAISession('generalized')" class="text-left bg-card hover:bg-slate-800 border-2 border-transparent hover:border-primary/40 rounded-2xl p-8 shadow-2xl transition-all group focus:outline-none flex flex-col justify-between h-full">
-                        <div>
-                            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-globe-americas"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Generalized Assistant</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6">A versatile, highly knowledgeable companion. Ask standard programming questions, study complex game architectures, or explore unrelated design subjects completely free-form.</p>
-                        </div>
-                        <span class="text-primary font-bold text-sm flex items-center gap-2">
-                            Initialize Generalist Mode <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </button>
-
-                    <!-- Option 2: Project based AI -->
-                    <button onclick="launchAISession('project')" class="text-left bg-card hover:bg-slate-800 border-2 border-transparent hover:border-primary/40 rounded-2xl p-8 shadow-2xl transition-all group focus:outline-none flex flex-col justify-between h-full">
-                        <div>
-                            <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-folder-open"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Sonnami Projects Expert</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6">Sage transforms into our specialized studio coordinator. Deep dive directly into details about <span class="text-emerald-400 font-semibold">Neon Drift</span>, <span class="text-emerald-400 font-semibold">Echoes of the Void</span>, and our web-based tools.</p>
-                        </div>
-                        <span class="text-emerald-400 font-bold text-sm flex items-center gap-2">
-                            Initialize Project Expert Mode <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                        </span>
-                    </button>
-                </div>
-
-                <div class="flex justify-center">
-                    <button onclick="showView('studio')" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg text-sm font-semibold tracking-wider transition-all border border-white/10 flex items-center gap-2 uppercase">
-                        <i class="fas fa-arrow-left text-xs"></i> Go back to Studio Website
-                    </button>
-                </div>
-            </div>
-
-            <!-- CHAT VIEW SECTION -->
-            <div id="ai-chat-interface" class="w-full max-w-5xl hidden">
-                <div class="flex items-center justify-between mb-6">
-                    <div class="flex items-center gap-3">
-                        <button onclick="exitChatToSelection()" class="text-gray-400 hover:text-white px-3 py-1.5 rounded bg-white/5 border border-white/5 text-xs transition-colors flex items-center gap-1.5 focus:outline-none">
-                            <i class="fas fa-arrow-left"></i> Change Mode
-                        </button>
-                        <div class="h-4 w-[1px] bg-white/10"></div>
-                        <div class="flex items-center gap-2 text-xs text-gray-400">
-                            <span>CURRENT MODE:</span>
-                            <span id="active-mode-tag" class="text-primary font-bold uppercase tracking-wider">GENERAL</span>
-                        </div>
-                    </div>
-                    <button onclick="showView('studio')" class="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 focus:outline-none">
-                        Close & Exit AI <i class="fas fa-times"></i>
-                    </button>
-                </div>
-
-                <!-- Chat layout wrapper -->
-                <div class="bg-dark border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row h-[600px]">
-                    
-                    <!-- Chat Sidebar Context Panel -->
-                    <div class="w-full md:w-64 bg-black/40 border-b md:border-b-0 md:border-r border-white/10 p-6 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-2 text-primary font-semibold text-sm mb-4">
-                                <i class="far fa-comments text-lg"></i>
-                                <span>SAGE ASSISTANT</span>
-                            </div>
-                            <p id="chat-sidebar-desc" class="text-xs text-gray-400 mb-6 leading-relaxed">
-                                Ready to talk code, gaming design models, or general questions.
-                            </p>
-                            
-                            <div class="space-y-2">
-                                <span class="text-[10px] text-gray-500 font-bold uppercase tracking-wider block">Suggested Questions</span>
-                                <div id="suggested-chips-container" class="space-y-2">
-                                    <!-- Populated dynamically via JS -->
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="pt-4 border-t border-white/5 hidden md:block">
-                            <div class="flex justify-between items-center text-[10px] text-gray-500 font-mono">
-                                <span>MODEL BASE:</span>
-                                <span class="text-primary font-semibold">GEMINI 2.5</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Chat Body Screen -->
-                    <div class="flex-grow flex flex-col h-full overflow-hidden relative bg-slate-900/40">
-                        <!-- Messages scroll area -->
-                        <div id="ai-chat-messages" class="flex-grow p-6 overflow-y-auto space-y-4 text-sm flex flex-col">
-                            <!-- Populated dynamically -->
-                        </div>
-
-                        <!-- Typing state indicator -->
-                        <div id="ai-loading" class="hidden absolute bottom-20 left-6 right-6 p-3 bg-black/90 border border-primary/20 rounded-lg flex items-center gap-3 text-xs text-primary">
-                            <div class="flex space-x-1 items-center py-1">
-                                <span class="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style="animation-delay: 0ms"></span>
-                                <span class="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style="animation-delay: 150ms"></span>
-                                <span class="h-1.5 w-1.5 bg-primary rounded-full animate-bounce" style="animation-delay: 300ms"></span>
-                            </div>
-                            <span class="text-gray-300" id="thinking-indicator-text">Sage is formulating an answer...</span>
-                        </div>
-
-                        <!-- Text Input Form -->
-                        <form id="ai-input-form" class="p-4 bg-black/40 border-t border-white/10 flex gap-2" onsubmit="handleAIChatSubmit(event)">
-                            <input type="text" id="ai-user-prompt" required placeholder="Send Sage a message..."
-                                class="flex-grow bg-darker border border-white/10 hover:border-primary/30 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm">
-                            <button type="submit" class="bg-primary hover:bg-emerald-400 text-dark font-bold text-sm px-6 py-3 rounded-lg transition-all flex items-center gap-2">
-                                <span>Send</span> <i class="fas fa-paper-plane text-xs"></i>
-                            </button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
-    </div>
+    </section>
 
-    <!-- DEDICATED YOUTUBE DOWNLOADER PAGE-VIEW -->
-    <div id="downloader-view" class="hidden min-h-screen pt-24 bg-darker relative z-10 transition-all duration-300">
-        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(#10B981 1.5px, transparent 1.5px); background-size: 30px 30px;"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10">
-            <!-- Header Section -->
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-white/10 pb-6 mb-8 gap-4">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-semibold mb-2">
-                        <i class="fas fa-shield-alt"></i> Real-Time Extraction Engine Active
-                    </div>
-                    <h2 class="font-display font-bold text-3xl md:text-4xl text-white">YT DOWNLOADER <span class="text-primary">CORE</span></h2>
-                    <p class="text-gray-400 text-sm mt-1">High-performance video extraction utility powered by dual-layer bypass routing.</p>
-                </div>
-                <button onclick="showView('studio')" class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 uppercase">
-                    <i class="fas fa-arrow-left"></i> Return to Studio
-                </button>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-28 bg-card/30 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 
-                <!-- LEFT PANEL: CONTROL PANEL -->
-                <div class="lg:col-span-5 bg-card/60 border border-white/10 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <i class="fas fa-sliders-h text-primary"></i> Extraction Settings
-                    </h3>
+                <!-- Left: About Text -->
+                <div class="reveal">
+                    <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">About Me</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-6">
+                        Building Worlds,<br>
+                        <span class="gradient-text">One Line of Code at a Time</span>
+                    </h2>
                     
-                    <form id="dl-config-form" onsubmit="executeRealDownload(event)" class="space-y-4">
-                        <!-- URL Input -->
-                        <div>
-                            <label for="video-url" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">YouTube Video URL</label>
-                            <input type="url" id="video-url" required placeholder="https://www.youtube.com/watch?v=..."
-                                class="w-full bg-darker border border-white/10 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm font-mono placeholder:text-gray-600">
-                        </div>
-
-                        <!-- Target Quality -->
-                        <div>
-                            <label for="video-quality" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resolution Format</label>
-                            <select id="video-quality" class="w-full bg-darker border border-white/10 focus:border-primary rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-sm font-sans">
-                                <option value="360">Standard 360p (High-compatibility stream)</option>
-                                <option value="720" selected>HD 720p (Recommended bypass quality)</option>
-                                <option value="1080">Full HD 1080p</option>
-                            </select>
-                        </div>
-
-                        <!-- Options switches mimicking python variables -->
-                        <div class="space-y-3 pt-2">
-                            <!-- Toggle 1: Restrict Filenames -->
-                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
-                                <div class="flex flex-col">
-                                    <span class="text-xs font-semibold text-white">Restrict Filenames</span>
-                                    <span class="text-[10px] text-gray-500">Only alphanumeric & underscore outputs</span>
-                                </div>
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" id="dl-opt-restrict" class="sr-only peer" checked>
-                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
-                                </label>
-                            </div>
-
-                            <!-- Toggle 2: Purge cache -->
-                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
-                                <div class="flex flex-col">
-                                    <span class="text-xs font-semibold text-white">Purge Cached Sessions</span>
-                                    <span class="text-[10px] text-gray-500">Bypasses direct YouTube 403 Forbidden cached blocks</span>
-                                </div>
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" id="dl-opt-cache" class="sr-only peer" checked>
-                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
-                                </label>
-                            </div>
-
-                            <!-- Toggle 3: Override clients -->
-                            <div class="flex items-center justify-between p-3 rounded bg-darker/50 border border-white/5">
-                                <div class="flex flex-col">
-                                    <span class="text-xs font-semibold text-white">Client Signature Spoofing</span>
-                                    <span class="text-[10px] text-gray-500">Forces alternative "TV" & "Web" streaming protocols</span>
-                                </div>
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" id="dl-opt-override" class="sr-only peer" checked>
-                                    <div class="w-9 h-5 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" id="simulate-dl-btn" class="w-full btn-solid py-4 text-sm font-bold flex items-center justify-center gap-2">
-                            <i class="fas fa-play"></i> EXECUTE EXTRACTOR
-                        </button>
-                    </form>
-                </div>
-
-                <!-- RIGHT PANEL: TERMINAL OUTPUT & PY SCRIPT -->
-                <div class="lg:col-span-7 flex flex-col gap-6">
-                    
-                    <!-- TERMINAL SIMULATOR -->
-                    <div class="bg-black rounded-2xl border border-white/10 overflow-hidden shadow-2xl flex flex-col h-[300px]">
-                        <div class="bg-dark border-b border-white/10 px-4 py-2.5 flex justify-between items-center text-xs">
-                            <div class="flex items-center gap-2 font-mono text-gray-400">
-                                <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                                <span class="ml-2">yt-dlp@sonnami-bypass-shell ~</span>
-                            </div>
-                            <span class="text-[10px] font-mono text-primary font-bold">READY</span>
-                        </div>
-                        
-                        <div id="terminal-screen" class="p-5 font-mono text-xs overflow-y-auto flex-grow space-y-2 leading-relaxed text-emerald-300">
-                            <p class="text-gray-500">[SYSTEM INITIALIZED: Waiting for video link parameters...]</p>
-                        </div>
-                    </div>
-
-                    <!-- PYTHON SCRIPT CODE EXPORTER -->
-                    <div class="bg-card border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                                <i class="fab fa-python text-emerald-400"></i> Local Python Script Exporter
-                            </h3>
-                            <button onclick="copyPythonCode()" class="text-xs text-primary hover:text-emerald-300 transition-colors flex items-center gap-1 focus:outline-none">
-                                <i class="far fa-copy"></i> Copy Script
-                            </button>
-                        </div>
-                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">
-                            Prefer compiling natively on your own machine? Copy this custom implementation of <code class="font-mono bg-black/40 text-emerald-300 px-1 rounded">yt-dlp</code> designed to seamlessly bypass standard bot-blocking exceptions.
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            I'm <strong class="text-white">Bismarck Nana Konadu</strong>, the Co-Founder and Lead Developer at 
+                            <strong class="text-white">Sonnami Studios</strong>. My journey in game development started with a 
+                            fascination for interactive storytelling and systems design.
                         </p>
-                        
-                        <!-- Custom styled Code Block -->
-                        <div class="relative bg-black rounded-xl border border-white/5 p-4 overflow-x-auto max-h-[220px]">
-                            <pre class="text-[11px] font-mono leading-relaxed text-slate-300 select-all" id="python-script-container"><code>import yt_dlp
+                        <p>
+                            At Sonnami, we create atmospheric games like <strong class="text-white">Neon Drift</strong> and 
+                            <strong class="text-white">Echoes of the Void</strong>, blending tight mechanics with immersive 
+                            environments. Beyond games, I build open-source tools like the <strong class="text-white">Sonnami 
+                            YT Downloader</strong> to solve real-world problems.
+                        </p>
+                        <p>
+                            I believe in clean code, thoughtful design, and pushing the boundaries of what indie studios can achieve. 
+                            When I'm not coding, you'll find me exploring new game mechanics or contributing to open-source projects.
+                        </p>
+                    </div>
 
-def download_youtube_video(video_url):
-    ydl_opts = {
-        # Keeps your 480p target
-        'format': 'bestvideo[height&lt;=480]+bestaudio/best[height&lt;=480]',
-        'restrictfilenames': True,
-        'outtmpl': '%(title)s_480p.%(ext)s',
-        
-        # --- THE FIXES FOR THE BOT BLOCK ---
-        # 1. Force yt-dlp to use alternative streaming clients (like TV)
-        'extractor_args': {
-            'youtube': {
-                'player_client': ['tv', 'web'],
-            }
-        },
-        # 2. Prevent YouTube from serving broken cached sessions
-        'rm_cache_dir': True,
-        # 3. Use an alternative fallback downloader strategy if it hits a 403 error
-        'check_formats': True,
-    }
-    
-    print("\nStarting download... Overriding player clients to bypass block.")
-    
-    try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([video_url])
-        print("\nDownload completed successfully!")
-    except Exception as e:
-        print(f"\nAn error occurred: {e}")
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="skill-tag"><i class="fas fa-code mr-1.5 text-[#e8a838]"></i> Unity & C#</span>
+                        <span class="skill-tag"><i class="fas fa-cube mr-1.5 text-[#e8a838]"></i> Unreal Engine 5</span>
+                        <span class="skill-tag"><i class="fab fa-python mr-1.5 text-[#e8a838]"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-gamepad mr-1.5 text-[#e8a838]"></i> Game Design</span>
+                    </div>
+                </div>
 
-if __name__ == "__main__":
-    url = input("Enter video url: ")
-    download_youtube_video(url)</code></pre>
+                <!-- Right: Quick Info Cards -->
+                <div class="reveal" style="transition-delay: 150ms;">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="modern-card p-6">
+                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-rocket"></i></div>
+                            <h3 class="text-white font-semibold text-sm">Co-Founder</h3>
+                            <p class="text-gray-500 text-sm">Sonnami Studios</p>
+                        </div>
+                        <div class="modern-card p-6">
+                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-code"></i></div>
+                            <h3 class="text-white font-semibold text-sm">Lead Developer</h3>
+                            <p class="text-gray-500 text-sm">Full-Stack & Game Dev</p>
+                        </div>
+                        <div class="modern-card p-6">
+                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-clock"></i></div>
+                            <h3 class="text-white font-semibold text-sm">Experience</h3>
+                            <p class="text-gray-500 text-sm">5+ Years in Development</p>
+                        </div>
+                        <div class="modern-card p-6">
+                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-globe"></i></div>
+                            <h3 class="text-white font-semibold text-sm">Projects</h3>
+                            <p class="text-gray-500 text-sm">10+ Released & Ongoing</p>
                         </div>
                     </div>
 
+                    <!-- Quote -->
+                    <div class="mt-6 p-6 rounded-xl border border-[#e8a838]/10 bg-[#e8a838]/5">
+                        <p class="text-gray-400 italic text-sm leading-relaxed">
+                            "I believe great games are born from the perfect intersection of 
+                            technical mastery and creative vision."
+                        </p>
+                        <p class="text-[#e8a838] text-xs font-semibold mt-2">— Bismarck Nana Konadu</p>
+                    </div>
                 </div>
 
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 lg:py-28 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Portfolio</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-3">A selection of games and tools I've built, from concept to release.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Project 1: Neon Drift -->
+                <div class="modern-card overflow-hidden group reveal" style="transition-delay: 100ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="project-overlay-1 absolute inset-0 flex items-center justify-center text-5xl text-[#e8a838]/30">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-[#e8a838] text-dark text-xs font-bold px-3 py-1 rounded-full">Released</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Neon Drift</h3>
+                        <p class="text-gray-500 text-sm mb-3">Fast-paced cyberpunk racing game with synthwave aesthetics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Unity</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">C#</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Arcade</span>
+                        </div>
+                        <a href="#" class="text-[#e8a838] hover:text-[#f7c948] text-sm font-semibold inline-flex items-center gap-1.5 transition-colors">
+                            View Project <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Echoes of the Void -->
+                <div class="modern-card overflow-hidden group reveal" style="transition-delay: 200ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="project-overlay-2 absolute inset-0 flex items-center justify-center text-5xl text-[#e8a838]/30">
+                            <i class="fas fa-ghost"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-[#e8a838]/20 text-[#e8a838] text-xs font-bold px-3 py-1 rounded-full border border-[#e8a838]/20">Early Access</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Echoes of the Void</h3>
+                        <p class="text-gray-500 text-sm mb-3">Psychological survival horror set in deep-space mining facility.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Unreal 5</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Horror</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">3D</span>
+                        </div>
+                        <a href="#" class="text-[#e8a838] hover:text-[#f7c948] text-sm font-semibold inline-flex items-center gap-1.5 transition-colors">
+                            View Project <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: YT Downloader -->
+                <div class="modern-card overflow-hidden group reveal" style="transition-delay: 300ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="project-overlay-3 absolute inset-0 flex items-center justify-center text-5xl text-[#e8a838]/30">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-[#e8a838] text-dark text-xs font-bold px-3 py-1 rounded-full">Open Source</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Sonnami YT Downloader</h3>
+                        <p class="text-gray-500 text-sm mb-3">Powerful video extraction tool with bypass capabilities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">yt-dlp</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Python</span>
+                            <span class="text-xs font-medium px-2.5 py-1 bg-white/5 rounded-full text-gray-400">Web App</span>
+                        </div>
+                        <a href="#" class="text-[#e8a838] hover:text-[#f7c948] text-sm font-semibold inline-flex items-center gap-1.5 transition-colors">
+                            View Project <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 lg:py-28 bg-card/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <div class="reveal">
+                    <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Expertise</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-6">
+                        Tech Stack & <span class="gradient-text">Skills</span>
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        I work across the full development spectrum — from game engines to backend systems. 
+                        Here are the tools and technologies I'm most proficient with.
+                    </p>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-white">Unity & C#</span>
+                                <span class="text-[#e8a838]">90%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-white">Unreal Engine 5</span>
+                                <span class="text-[#e8a838]">75%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-white">Python & Automation</span>
+                                <span class="text-[#e8a838]">85%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-white">Game Design & Mechanics</span>
+                                <span class="text-[#e8a838]">80%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 150ms;">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="modern-card p-5 text-center">
+                            <i class="fab fa-unity text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Unity</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-cube text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Unreal Engine</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fab fa-python text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Python</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fab fa-git-alt text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Git</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-code text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">C# / C++</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-cloud text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">AWS / Cloud</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-database text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">SQL</span>
+                        </div>
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-music text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">FMOD / Audio</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-28 bg-dark relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Connect</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">
+                    Let's Build <span class="gradient-text">Something Great</span>
+                </h2>
+                <p class="text-gray-500 mt-3">Have a project in mind? Let's talk about it.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="space-y-6 reveal" style="transition-delay: 100ms;">
+                    <div class="modern-card p-6 flex items-start gap-4">
+                        <div class="text-[#e8a838] text-xl mt-1"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">WhatsApp</h4>
+                            <a href="https://wa.me/233206933991" target="_blank" class="text-gray-400 hover:text-[#e8a838] transition-colors text-sm">+233 20 693 3991</a>
+                        </div>
+                    </div>
+                    <div class="modern-card p-6 flex items-start gap-4">
+                        <div class="text-[#e8a838] text-xl mt-1"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Email</h4>
+                            <a href="mailto:contact@sonnamidevs.com" class="text-gray-400 hover:text-[#e8a838] transition-colors text-sm">contact@sonnamidevs.com</a>
+                        </div>
+                    </div>
+                    <div class="modern-card p-6 flex items-start gap-4">
+                        <div class="text-[#e8a838] text-xl mt-1"><i class="fab fa-instagram"></i></div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Instagram</h4>
+                            <a href="https://instagram.com/sonnamidevs" target="_blank" class="text-gray-400 hover:text-[#e8a838] transition-colors text-sm">@sonnamidevs</a>
+                        </div>
+                    </div>
+                    <div class="modern-card p-6 flex items-start gap-4">
+                        <div class="text-[#e8a838] text-xl mt-1"><i class="fab fa-github"></i></div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">GitHub</h4>
+                            <a href="https://github.com/sonnamidevs" target="_blank" class="text-gray-400 hover:text-[#e8a838] transition-colors text-sm">github.com/sonnamidevs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="modern-card p-6 reveal" style="transition-delay: 200ms;">
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1.5">Your Name</label>
+                            <input type="text" required id="contactName"
+                                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e8a838] focus:ring-1 focus:ring-[#e8a838] transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1.5">Email</label>
+                            <input type="email" required id="contactEmail"
+                                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e8a838] focus:ring-1 focus:ring-[#e8a838] transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1.5">Message</label>
+                            <textarea rows="4" required id="contactMessage"
+                                class="w-full bg-dark/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e8a838] focus:ring-1 focus:ring-[#e8a838] transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary py-3.5 text-base font-semibold inline-flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <div id="contactSuccess" class="hidden mt-4 p-3 rounded-lg bg-[#e8a838]/10 border border-[#e8a838]/30 text-[#e8a838] text-sm text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Message sent! I'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-white/10 relative z-10 text-center animate-none">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="font-display font-bold text-2xl text-white/80 mb-4 uppercase">
-                Sonnami
-            </div>
-            <p class="text-sm text-gray-600">
-                &copy; <span id="year"></span> Sonnami Studio. All rights reserved.
-            </p>
-            <div class="mt-4 flex justify-center space-x-4 text-gray-600">
-                <button onclick="openErrorPortal('itchio')" class="hover:text-primary transition-colors focus:outline-none"><i class="fab fa-itch-io"></i></button>
-                <button onclick="openErrorPortal('github')" class="hover:text-white transition-colors focus:outline-none"><i class="fab fa-github"></i></button>
-                <button onclick="openErrorPortal('linkedin')" class="hover:text-white transition-colors focus:outline-none"><i class="fab fa-linkedin"></i></button>
+    <footer class="py-8 border-t border-white/5 bg-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="font-display font-bold text-lg text-white">
+                    Bismarck<span class="text-[#e8a838]">.</span>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-gray-600 text-sm">&copy; <span id="year"></span> Bismarck Nana Konadu</p>
             </div>
         </div>
     </footer>
 
-    <!-- INTERACTIVE ERROR PORTAL OVERLAY -->
-    <div id="error-portal" class="fixed inset-0 z-50 hidden bg-[#020617] text-white flex flex-col justify-between overflow-y-auto">
-        <!-- Error Header -->
-        <header class="w-full px-6 py-6 border-b border-white/5 bg-darker/60 backdrop-blur-md">
-            <div class="max-w-7xl mx-auto flex justify-between items-center">
-                <button onclick="closeErrorPortal()" class="font-display font-bold text-xl text-white tracking-tighter uppercase hover:text-primary transition-all focus:outline-none">
-                    Sonnami
-                </button>
-                <span id="portal-system-status" class="text-xs font-mono text-gray-500 uppercase">SYS_STATUS: READY</span>
-            </div>
-        </header>
-
-        <!-- Error Body -->
-        <main class="flex-grow flex items-center justify-center px-4 py-16 crt-effect">
-            <div class="max-w-xl w-full text-center bg-card/40 border border-white/5 p-8 md:p-12 rounded-2xl backdrop-blur-sm shadow-2xl">
-                
-                <!-- Colorbars for Media Portals (Like YouTube) -->
-                <div id="portal-colorbars" class="hidden w-full flex mb-6 rounded-md overflow-hidden border border-white/10">
-                    <div class="flex-grow color-block bg-[#10B981]"></div>
-                    <div class="flex-grow color-block bg-[#059669]"></div>
-                    <div class="flex-grow color-block bg-[#047857]"></div>
-                    <div class="flex-grow color-block bg-[#065f46]"></div>
-                    <div class="flex-grow color-block bg-[#064e3b]"></div>
-                    <div class="flex-grow color-block bg-[#022c22]"></div>
-                    <div class="flex-grow color-block bg-black"></div>
-                </div>
-
-                <!-- Central Portal Icon wrapper -->
-                <div id="portal-icon-container" class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 border animate-pulse">
-                    <i id="portal-icon" class="text-4xl"></i>
-                </div>
-                
-                <h1 id="portal-title" class="text-3xl md:text-4xl font-display font-bold text-white mb-4 uppercase">
-                    PORTAL ERROR
-                </h1>
-                
-                <p id="portal-description" class="text-gray-400 mb-8 leading-relaxed">
-                    The requested data pipeline could not be loaded into memory.
-                </p>
-
-                <!-- Console Output Log -->
-                <div class="p-4 bg-black/40 rounded-lg border border-white/5 text-left font-mono text-xs mb-8 overflow-x-auto">
-                    <p id="portal-log-line-1" class="text-gray-300"></p>
-                    <p id="portal-log-line-2" class="text-red-400"></p>
-                    <p id="portal-log-line-3" class="text-gray-500"></p>
-                </div>
-
-                <!-- Action Button Controls -->
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button onclick="closeErrorPortal()" class="btn-modern px-6 py-3 rounded-md font-bold text-sm inline-flex items-center justify-center gap-2 focus:outline-none">
-                        <i class="fas fa-undo-alt"></i> Respawn Player
-                    </button>
-                    <a href="#contact" onclick="closeErrorPortal()" class="px-6 py-3 bg-white/5 border border-white/10 hover:border-white/20 text-white rounded-md text-sm font-bold tracking-wider hover:bg-white/10 transition-all uppercase flex items-center justify-center gap-2">
-                        <i class="fas fa-envelope"></i> Contact System Admin
-                    </a>
-                </div>
-            </div>
-        </main>
-
-        <!-- Error Footer -->
-        <footer class="w-full py-6 text-center border-t border-white/5 text-xs text-gray-600">
-            &copy; <span id="portal-year"></span> Sonnami Studio. Local bounds compiled securely inside iframe container.
-        </footer>
-    </div>
-
-    <!-- Scripts -->
     <script>
-        // Set current year in footer
+        // Current year
         document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('portal-year').textContent = new Date().getFullYear();
 
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu on link click
-        menu.querySelectorAll('a, button').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
 
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg', 'bg-darker/95');
-                navbar.classList.remove('bg-darker/90');
+                navbar.classList.add('shadow-lg', 'bg-dark/95');
             } else {
-                navbar.classList.remove('shadow-lg', 'bg-darker/95');
-                navbar.classList.add('bg-darker/90');
+                navbar.classList.remove('shadow-lg', 'bg-dark/95');
             }
         });
 
-        // Form submission simulation
-        function showSuccessMessage() {
-            const form = document.getElementById('contactForm');
-            const successDiv = document.getElementById('successMessage');
-            
-            // Change button state
-            const btn = form.querySelector('button[type="submit"]');
+        // Scroll Reveal
+        function revealSections() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const visible = 120;
+
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - visible) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+
+        // Contact Form Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SENDING...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
 
-            // Simulate network request
             setTimeout(() => {
-                form.reset();
                 btn.innerHTML = originalText;
                 btn.disabled = false;
-                successDiv.classList.remove('hidden');
+                document.getElementById('contactSuccess').classList.remove('hidden');
+                e.target.reset();
                 
-                // Hide success message after 5 seconds
                 setTimeout(() => {
-                    successDiv.classList.add('hidden');
+                    document.getElementById('contactSuccess').classList.add('hidden');
                 }, 5000);
             }, 1500);
         }
 
-        // Scroll Reveal Animation Configuration
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // when to trigger
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        // Trigger reveal on scroll and initial load
-        window.addEventListener("scroll", reveal);
-        reveal(); // Call once on load
-
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
                 if (targetId.startsWith('#') && targetId.length > 1) {
                     e.preventDefault();
                     const target = document.querySelector(targetId);
                     if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        target.scrollIntoView({ behavior: 'smooth' });
                     }
                 }
             });
         });
-
-        // ============================================
-        // DYNAMIC VIEW NAVIGATION SYSTEM
-        // ============================================
-        function showView(viewName) {
-            const studioView = document.getElementById('studio-view');
-            const aiView = document.getElementById('ai-view');
-            const downloaderView = document.getElementById('downloader-view');
-
-            // Hide all views initially
-            studioView.classList.add('hidden');
-            aiView.classList.add('hidden');
-            downloaderView.classList.add('hidden');
-
-            if (viewName === 'ai') {
-                aiView.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                exitChatToSelection(); // Open launcher choice
-            } else if (viewName === 'downloader') {
-                downloaderView.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                studioView.classList.remove('hidden');
-                reveal(); // Recalculate portfolio reveal positions
-            }
-            
-            // Auto close mobile menu if opened
-            document.getElementById('mobile-menu').classList.add('hidden');
-        }
-
-        // ============================================
-        // REAL YT DOWNLOADER EXTRACTION SYSTEM (DECENTRALIZED + COBALT MULTI-INSTANCE)
-        // ============================================
-        
-        // Extract Video ID helper
-        function extractVideoId(url) {
-            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-            const match = url.match(regExp);
-            return (match && match[2].length === 11) ? match[2] : null;
-        }
-
-        async function executeRealDownload(e) {
-            if (e) e.preventDefault();
-            const urlInput = document.getElementById('video-url');
-            const url = urlInput.value.trim();
-            if (!url) return;
-
-            const quality = document.getElementById('video-quality').value;
-            const optRestrict = document.getElementById('dl-opt-restrict').checked;
-            const optCache = document.getElementById('dl-opt-cache').checked;
-            const optOverride = document.getElementById('dl-opt-override').checked;
-
-            const terminal = document.getElementById('terminal-screen');
-            terminal.innerHTML = ""; // Clear log output
-
-            appendTerminalLine(`[!] Executing Dual-Engine Bypass Pipeline...`, "sys");
-            appendTerminalLine(`[!] Target URL: ${url}`, "info");
-
-            const videoId = extractVideoId(url);
-            if (!videoId) {
-                appendTerminalLine(`[Error] Could not parse a valid 11-character YouTube video ID from the URL.`, "warn");
-                return;
-            }
-            appendTerminalLine(`[!] Identified Video ID: ${videoId}`, "success");
-
-            const downloadBtn = document.getElementById('simulate-dl-btn');
-            downloadBtn.disabled = true;
-            downloadBtn.innerHTML = `<i class="fas fa-sync fa-spin"></i> Extracting...`;
-
-            let success = false;
-            let finalDownloadUrl = null;
-            let fallbackError = "";
-
-            // --- ENGINE 1: Decentralized Invidious Instance Pools ---
-            // Grabs clean direct MP4 files right from YouTube media streams
-            const invidiousInstances = [
-                "https://yewtu.be",
-                "https://invidious.flokinet.to",
-                "https://invidious.projectsegfau.lt",
-                "https://invidious.nerdvpn.de"
-            ];
-
-            appendTerminalLine(`\n[Engine 1] Launching decentralized Direct-Stream retrieval...`, "sys");
-
-            for (let i = 0; i < invidiousInstances.length; i++) {
-                const instance = invidiousInstances[i];
-                const hostname = new URL(instance).hostname;
-                appendTerminalLine(`[>] Querying pool node: ${hostname}...`, "info");
-
-                try {
-                    const response = await fetch(`${instance}/api/v1/videos/${videoId}`, {
-                        method: 'GET',
-                        headers: { 'Accept': 'application/json' }
-                    });
-
-                    if (response.ok) {
-                        const videoData = await response.json();
-                        
-                        // Parse direct streams
-                        if (videoData && videoData.formatStreams && videoData.formatStreams.length > 0) {
-                            // Find the best quality matching user's target selection
-                            let selectedStream = null;
-                            const targetLabel = `${quality}p`;
-
-                            // Try to match exact resolution requested
-                            selectedStream = videoData.formatStreams.find(s => s.qualityLabel === targetLabel);
-
-                            // Fallback to highest available if chosen isn't found
-                            if (!selectedStream) {
-                                selectedStream = videoData.formatStreams[0]; // grab standard
-                            }
-
-                            if (selectedStream && selectedStream.url) {
-                                finalDownloadUrl = selectedStream.url;
-                                success = true;
-                                appendTerminalLine(`[+] Node ${hostname} bypassed player cipher signature successfully!`, "success");
-                                break;
-                            }
-                        }
-                    } else {
-                        fallbackError = `Server responded with status: ${response.status}`;
-                    }
-                } catch (err) {
-                    fallbackError = err.message || "Network exception or CORS restriction.";
-                }
-            }
-
-            // --- ENGINE 2: Cobalt Instance Proxy Failover ---
-            if (!success) {
-                appendTerminalLine(`\n[Engine 1] Stream extraction blocked or rate-limited. Falling back to Engine 2...`, "warn");
-                appendTerminalLine(`[Engine 2] Contacting alternate Cobalt proxy nodes...`, "sys");
-
-                const cobaltInstances = [
-                    "https://api.cobalt.tools/api/json",
-                    "https://cobalt.api.ryb.zone/api/json",
-                    "https://cobalt.hyper.lol/api/json"
-                ];
-
-                for (let i = 0; i < cobaltInstances.length; i++) {
-                    const instanceUrl = cobaltInstances[i];
-                    const hostname = new URL(instanceUrl).hostname;
-                    appendTerminalLine(`[>] Contacting endpoint: ${hostname}...`, "info");
-
-                    try {
-                        const response = await fetch(instanceUrl, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                url: url,
-                                videoQuality: quality,
-                                downloadMode: "auto",
-                                filenamePattern: optRestrict ? "basic" : "pretty"
-                            })
-                        });
-
-                        if (response.ok) {
-                            const data = await response.json();
-                            if (data && (data.url || data.stream)) {
-                                finalDownloadUrl = data.url || data.stream;
-                                success = true;
-                                appendTerminalLine(`[+] Handshake successfully authenticated with ${hostname}!`, "success");
-                                break;
-                            }
-                        } else {
-                            const errorDetails = await response.text();
-                            fallbackError = `Status ${response.status}: ${errorDetails}`;
-                        }
-                    } catch (err) {
-                        fallbackError = err.message || "Endpoint block or CORS protocol issue.";
-                    }
-                }
-            }
-
-            // --- PROCESS RESULTS AND TRIGGER BROWSER DOWNLOAD ---
-            if (success && finalDownloadUrl) {
-                appendTerminalLine(`\n[+] Stream authorization key verified. Link successfully established!`, "success");
-                appendTerminalLine(`[+] File link: ${finalDownloadUrl.substring(0, 50)}...`, "info");
-                appendTerminalLine(`[+] Dispatching direct browser download window...`, "success");
-
-                // Trigger file download stream in browser
-                try {
-                    const dlLink = document.createElement('a');
-                    dlLink.href = finalDownloadUrl;
-                    dlLink.target = "_blank"; // Prevents navigating away from your app
-                    dlLink.download = "";
-                    document.body.appendChild(dlLink);
-                    dlLink.click();
-                    document.body.removeChild(dlLink);
-                    
-                    appendTerminalLine(`\n[SUCCESS] Decryption bypass fully executed inside HTML sandbox.`, "success");
-                } catch(dlErr) {
-                    appendTerminalLine(`[!] Auto-click block encountered. Click below to stream file manually:`, "warn");
-                    const manualLink = document.createElement('a');
-                    manualLink.href = finalDownloadUrl;
-                    manualLink.target = "_blank";
-                    manualLink.className = "text-primary underline font-bold block mt-2";
-                    manualLink.innerText = "Download Stream File";
-                    terminal.appendChild(manualLink);
-                }
-            } else {
-                appendTerminalLine(`\n[!] Dual-Engine Pipeline failed to complete handshake.`, "warn");
-                appendTerminalLine(`[Reason]: All public proxy networks are currently ratelimited by YouTube's firewall.`, "warn");
-                appendTerminalLine(`[Details]: ${fallbackError}`, "info");
-                appendTerminalLine(`\n[RECOMMENDED FIX]: Copy the Python Script Exporter directly below and run it locally. Running python locally bypasses server-side rate-limits entirely!`, "success");
-            }
-
-            downloadBtn.disabled = false;
-            downloadBtn.innerHTML = `<i class="fas fa-play"></i> EXECUTE EXTRACTOR`;
-        }
-
-        function appendTerminalLine(text, type) {
-            const terminal = document.getElementById('terminal-screen');
-            const line = document.createElement('p');
-            
-            if (type === "success") {
-                line.className = "text-emerald-400 font-mono";
-            } else if (type === "warn") {
-                line.className = "text-yellow-400 font-mono";
-            } else if (type === "sys") {
-                line.className = "text-blue-400 font-mono";
-            } else {
-                line.className = "text-slate-300 font-mono";
-            }
-
-            line.innerText = text;
-            terminal.appendChild(line);
-            terminal.scrollTop = terminal.scrollHeight;
-            return line;
-        }
-
-        function copyPythonCode() {
-            const codeText = document.getElementById('python-script-container').innerText;
-            // Clipboard Copy API
-            const dummy = document.createElement("textarea");
-            document.body.appendChild(dummy);
-            dummy.value = codeText;
-            dummy.select();
-            document.execCommand("copy");
-            document.body.removeChild(dummy);
-
-            // Trigger temporary visual notification on copy button
-            const copyBtn = document.querySelector('button[onclick="copyPythonCode()"]');
-            const originalText = copyBtn.innerHTML;
-            copyBtn.innerHTML = `<i class="fas fa-check"></i> Copied!`;
-            setTimeout(() => {
-                copyBtn.innerHTML = originalText;
-            }, 2000);
-        }
-
-        // ============================================
-        // SAGE MULTI-MODE CONVERSATIONAL EXPERT LOGIC
-        // ============================================
-        const apiKey = ""; // API key populated at runtime by the environment
-        
-        // Dynamic Personas configuration
-        const aiModes = {
-            generalized: {
-                tagName: "General Assistant Mode",
-                systemPrompt: `You are Sage, a warm, positive, and knowledgeable conversational assistant.
-Your focus is general: you assist the user in general programming topics, general coding languages, system designs, logic architecture, mathematical structures, or just chat about gaming in general.
-Talk naturally, like an experienced software engineer or creative design lead. Keep answers clear, supportive, structured, and easy to read.`,
-                welcomeMessage: "Hi there! I'm Sage, your friendly AI companion. I'm ready to help you with general programming topics, logic concepts, or anything else that's on your mind. Ask me anything!",
-                sidebarDesc: "A warm and conversational assistant trained to guide you through broad coding concepts, game design tips, and general topics.",
-                suggestions: [
-                    { label: "Design Tips", prompt: "Can you share some general game design tips for a beginner?" },
-                    { label: "Clean Code advice", prompt: "What are some best practices for writing clean C# code in Unity?" },
-                    { label: "Interactive Mechanics", prompt: "How can I make character movement feel more fluid and responsive?" }
-                ]
-            },
-            project: {
-                tagName: "Project Expert Mode",
-                systemPrompt: `You are Sage, the official Sonnami Studio expert.
-Your specific operational directive is to answer questions related directly to our studio catalog, systems design, and mechanics:
-1. Neon Drift: A fast-paced cyberpunk racing arcade game built on Unity with C# (Released). Focuses on drifting physics, procedural track generation, synthwave aesthetics.
-2. Echoes of the Void: A deep-space psychological horror built on Unreal Engine 5 (Early Access). Focuses on resource management, player sanity mechanics, pathfinding in puzzle rooms.
-3. Sonnami YT Downloader: Our robust, open-source Python tool powered by yt-dlp that overrides player_client parameters to ['tv', 'web'] in order to bypass bot-blocking blocks, purges caches, and extracts standard videos locally or via open-source Cobalt API fetch protocols inside our web app.
-Do not talk about general coding unless it is connected to explaining or detailing these projects or their mechanics. Keep responses engaging and studio-focused.`,
-                welcomeMessage: "Greetings! I am Sage, Sonnami Studio's specialized project assistant. I can guide you through the architectural designs of our games: Neon Drift, Echoes of the Void, or our open-source python/web YouTube Downloader tool. Which build are we inspecting today?",
-                sidebarDesc: "Our dedicated assistant loaded with contextual resources on Neon Drift, Echoes of the Void, and Tactics Grid.",
-                suggestions: [
-                    { label: "Bypass Bot blocks", prompt: "Explain how overriding player_client to ['tv', 'web'] helps bypass download bot blocks on YouTube." },
-                    { label: "Inspect Neon Drift", prompt: "What is Neon Drift about and how was procedural track generation achieved?" },
-                    { label: "Unravel Echoes of the Void", prompt: "Explain the A* pathfinding approach used in Echoes of the Void." }
-                ]
-            }
-        };
-
-        let currentActiveMode = null;
-
-        // Transitions from the Launcher Selection screen to the specific Active Chat layout
-        function launchAISession(modeKey) {
-            const config = aiModes[modeKey];
-            if (!config) return;
-
-            currentActiveMode = modeKey;
-
-            // Set UI details
-            document.getElementById('active-mode-tag').innerText = config.tagName;
-            document.getElementById('chat-sidebar-desc').innerText = config.sidebarDesc;
-
-            // Render Suggested Quick Buttons
-            const chipsBox = document.getElementById('suggested-chips-container');
-            chipsBox.innerHTML = "";
-            config.suggestions.forEach(item => {
-                const btn = document.createElement('button');
-                btn.className = "w-full text-left text-xs text-gray-300 hover:text-primary hover:bg-primary/10 p-2.5 rounded border border-white/5 hover:border-primary/20 transition-all block";
-                btn.innerHTML = `<i class="far fa-dot-circle text-primary/60 text-[10px] mr-1.5"></i> ${item.label}`;
-                btn.onclick = () => sendQuickPrompt(item.prompt);
-                chipsBox.appendChild(btn);
-            });
-
-            // Clean previous messages & append Mode Welcomer
-            const chatMessagesContainer = document.getElementById('ai-chat-messages');
-            chatMessagesContainer.innerHTML = "";
-            renderChatMessage("Sage", config.welcomeMessage);
-
-            // Hide launcher, show chat interface
-            document.getElementById('ai-launcher-screen').classList.add('hidden');
-            document.getElementById('ai-chat-interface').classList.remove('hidden');
-        }
-
-        // Returns user back to the mode selector view
-        function exitChatToSelection() {
-            currentActiveMode = null;
-            document.getElementById('ai-chat-interface').classList.add('hidden');
-            document.getElementById('ai-launcher-screen').classList.remove('hidden');
-        }
-
-        // Connects to Gemini API with an exponential backoff wrapper
-        async function queryGemini(promptText, retryCount = 0) {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-            const sysInstructions = aiModes[currentActiveMode]?.systemPrompt || aiModes.generalized.systemPrompt;
-            
-            const payload = {
-                contents: [{
-                    parts: [{ text: promptText }]
-                }],
-                systemInstruction: {
-                    parts: [{ text: sysInstructions }]
-                }
-            };
-
-            try {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP Error Status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (!aiResponse) {
-                    throw new Error("Invalid output payload from API response.");
-                }
-                return aiResponse;
-            } catch (err) {
-                if (retryCount < 5) {
-                    const delay = Math.pow(2, retryCount) * 1000;
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                    return await queryGemini(promptText, retryCount + 1);
-                } else {
-                    throw err; // Out of retries
-                }
-            }
-        }
-
-        // Renders dialogue segments into scrolling frame
-        function renderChatMessage(sender, text) {
-            const container = document.getElementById('ai-chat-messages');
-            const messageWrapper = document.createElement('div');
-            messageWrapper.className = `self-start w-full flex flex-col mb-4`;
-            
-            const isAI = sender === "Sage";
-            const bubbleBg = isAI ? "bg-card/60 text-slate-100 border border-white/10 shadow-sm" : "bg-primary/10 text-white border border-primary/30 ml-auto self-end";
-            const alignment = isAI ? "self-start" : "self-end max-w-[85%]";
-            
-            // Format standard text formatting structures
-            let cleanText = text
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/\n/g, "<br>")
-                .replace(/`([^`]+)`/g, '<code class="bg-black/30 text-emerald-400 px-1.5 py-0.5 rounded font-mono text-xs">$1</code>');
-
-            messageWrapper.innerHTML = `
-                <div class="${alignment} ${bubbleBg} p-4 rounded-xl text-sm leading-relaxed max-w-[85%]">
-                    <span class="text-primary text-[11px] font-bold block mb-1 uppercase tracking-wider">${sender}:</span>
-                    <div>${cleanText}</div>
-                </div>
-            `;
-            container.appendChild(messageWrapper);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        // Processes prompt message handling inside the conversation state
-        async function handleAIChatSubmit(e) {
-            if (e) e.preventDefault();
-            const inputField = document.getElementById('ai-user-prompt');
-            const prompt = inputField.value.trim();
-            if (!prompt) return;
-
-            // Add user message to log
-            renderChatMessage("You", prompt);
-            inputField.value = ""; // Empty input panel
-
-            // Show simple loading state
-            const loader = document.getElementById('ai-loading');
-            loader.classList.remove('hidden');
-
-            try {
-                const answer = await queryGemini(prompt);
-                loader.classList.add('hidden');
-                renderChatMessage("Sage", answer);
-            } catch (err) {
-                loader.classList.add('hidden');
-                renderChatMessage("Sage", "I ran into a connection issue formulating my response. Please check your network and try again.");
-            }
-        }
-
-        // Directly launches a preset suggestion
-        function sendQuickPrompt(promptText) {
-            const inputField = document.getElementById('ai-user-prompt');
-            inputField.value = promptText;
-            handleAIChatSubmit();
-        }
     </script>
 </body>
 </html>
