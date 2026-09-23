@@ -5,48 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bismarck Nana Konadu | Sonnami Co-Founder & Developer</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Bismarck Nana Konadu, Co-Founder of Sonnami. Indie game developer, software engineer, and creator of Neon Drift, Echoes of the Void, and open-source tools.">
-    <meta name="keywords" content="Bismarck Nana Konadu, Sonnami, Sonnami Co-Founder, indie game developer, game development, software engineer, Neon Drift, Echoes of the Void">
+    <!-- ===================== SEO META TAGS ===================== -->
+    <meta name="description" content="Bismarck Nana Konadu — Co-Founder of Sonnami Studios, creator of the Weather Hub app, and Mid Tech Code Society Best Student Award 2024 recipient. Indie game developer, software engineer, and open-source contributor from Ghana.">
+    <meta name="keywords" content="Bismarck Nana Konadu, Sonnami Studios, Sonnami Develops Ghana, Weather Hub app, Weather Hub by Sonnami, Mid Tech Code Society, Mid Tech Code Society Award 2024, Ghana developer, Ghana software engineer, indie game developer Ghana, Neon Drift, Echoes of the Void, open source Ghana, Sonnami YT Downloader">
+    <meta name="author" content="Bismarck Nana Konadu">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sonnamidevs.github.io/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Bismarck Nana Konadu | Sonnami Co-Founder & Developer">
-    <meta property="og:description" content="Personal portfolio of Bismarck Nana Konadu, Co-Founder of Sonnami Studios. Game developer, software engineer, and open-source contributor.">
+    <meta property="og:description" content="Co-Founder of Sonnami Studios, creator of Weather Hub, and Mid Tech Code Society Award 2024 recipient. Explore my games, apps, and open-source tools.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sonnamidevs.github.io/">
+    <meta property="og:image" content="https://sonnamidevs.github.io/og-image.png">
+    <meta property="og:site_name" content="Bismarck Nana Konadu Portfolio">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bismarck Nana Konadu | Sonnami Co-Founder">
-    <meta name="twitter:description" content="Personal portfolio of Bismarck Nana Konadu, Co-Founder of Sonnami Studios.">
+    <meta name="twitter:title" content="Bismarck Nana Konadu | Sonnami Co-Founder & Developer">
+    <meta name="twitter:description" content="Co-Founder of Sonnami Studios, creator of Weather Hub, and Mid Tech Code Society Award 2024 recipient.">
+    <meta name="twitter:image" content="https://sonnamidevs.github.io/og-image.png">
+    <meta name="twitter:creator" content="@sonnamidevs">
     
-    <!-- Person Schema -->
+    <!-- Person + WebSite Schema for Google Rich Results -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Bismarck Nana Konadu",
-      "alternateName": "sonnamidevs",
-      "jobTitle": "Co-Founder & Lead Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sonnami Studios"
-      },
-      "url": "https://sonnamidevs.github.io/",
-      "sameAs": [
-        "https://github.com/sonnamidevs",
-        "https://twitter.com/sonnamidevs",
-        "https://instagram.com/sonnamidevs",
-        "https://linkedin.com/in/sonnamidevs"
-      ],
-      "knowsAbout": [
-        "Game Development",
-        "Unity",
-        "Unreal Engine",
-        "C#",
-        "Python",
-        "Software Engineering",
-        "Indie Game Development"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://sonnamidevs.github.io/#person",
+          "name": "Bismarck Nana Konadu",
+          "alternateName": ["sonnamidevs", "Bismark NK"],
+          "jobTitle": "Co-Founder & Lead Developer",
+          "description": "Ghanaian software engineer, indie game developer, and recipient of the Mid Tech Code Society Best Student Award 2024.",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sonnami Studios",
+            "alternateName": "Sonnami Develops"
+          },
+          "url": "https://sonnamidevs.github.io/",
+          "image": "https://sonnamidevs.github.io/og-image.png",
+          "nationality": {
+            "@type": "Country",
+            "name": "Ghana"
+          },
+          "award": [
+            "Mid Tech Code Society Best Student Award 2024"
+          ],
+          "sameAs": [
+            "https://github.com/sonnamidevs",
+            "https://twitter.com/sonnamidevs",
+            "https://instagram.com/sonnamidevs",
+            "https://linkedin.com/in/sonnamidevs",
+            "https://youtube.com/@sonnamidevs",
+            "https://sonnamidevs.itch.io"
+          ],
+          "knowsAbout": [
+            "Game Development",
+            "Unity",
+            "Unreal Engine",
+            "C#",
+            "Python",
+            "Flutter",
+            "Mobile App Development",
+            "Software Engineering",
+            "Indie Game Development",
+            "Open Source"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sonnamidevs.github.io/#website",
+          "url": "https://sonnamidevs.github.io/",
+          "name": "Bismarck Nana Konadu Portfolio",
+          "publisher": {
+            "@id": "https://sonnamidevs.github.io/#person"
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "Weather Hub",
+          "alternateName": "Weather Hub by Sonnami Develops",
+          "operatingSystem": "Android",
+          "applicationCategory": "WeatherApplication",
+          "description": "A minimal, accurate weather app with 5-day forecast, health tips, daily quotes, and smart notifications. Built with Flutter for Ghana and beyond.",
+          "author": {
+            "@id": "https://sonnamidevs.github.io/#person"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "downloadUrl": "https://github.com/sonnamidevs/sonnamidevs.github.io/releases/latest/download/app-release.apk"
+        }
       ]
     }
     </script>
@@ -64,19 +119,10 @@
             theme: {
                 extend: {
                     colors: {
-                        // Premium Dark Theme - Deep Navy & Warm Accents
                         navy: {
-                            50: '#e8edf5',
-                            100: '#c5d1e6',
-                            200: '#9eb2d4',
-                            300: '#778fc1',
-                            400: '#5573b3',
-                            500: '#3458a5',
-                            600: '#2a4a8c',
-                            700: '#1f3a6e',
-                            800: '#152a50',
-                            900: '#0a1a32',
-                            950: '#050f1f'
+                            50: '#e8edf5', 100: '#c5d1e6', 200: '#9eb2d4', 300: '#778fc1',
+                            400: '#5573b3', 500: '#3458a5', 600: '#2a4a8c', 700: '#1f3a6e',
+                            800: '#152a50', 900: '#0a1a32', 950: '#050f1f'
                         },
                         accent: {
                             light: '#f7c948',
@@ -97,7 +143,6 @@
                         'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'gradient': 'gradient 8s ease infinite',
-                        'border-glow': 'borderGlow 3s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
@@ -107,10 +152,6 @@
                         gradient: {
                             '0%, 100%': { backgroundPosition: '0% 50%' },
                             '50%': { backgroundPosition: '100% 50%' }
-                        },
-                        borderGlow: {
-                            '0%, 100%': { borderColor: 'rgba(232, 168, 56, 0.2)' },
-                            '50%': { borderColor: 'rgba(232, 168, 56, 0.6)' }
                         }
                     }
                 }
@@ -119,22 +160,12 @@
     </script>
 
     <style>
-        body {
-            background: #0a0f1a;
-            color: #e8edf5;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
+        body { background: #0a0f1a; color: #e8edf5; overflow-x: hidden; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0a0f1a; }
-        ::-webkit-scrollbar-thumb { 
-            background: #e8a838; 
-            border-radius: 3px;
-        }
+        ::-webkit-scrollbar-thumb { background: #e8a838; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #f7c948; }
 
-        /* Gradient Text */
         .gradient-text {
             background: linear-gradient(135deg, #e8a838 0%, #f7c948 50%, #e8a838 100%);
             background-size: 200% 200%;
@@ -143,24 +174,13 @@
             animation: gradient 4s ease infinite;
         }
 
-        /* Subtle Glow Effects */
-        .glow-hover {
-            transition: all 0.3s ease;
-        }
-        .glow-hover:hover {
-            color: #e8a838;
-            text-shadow: 0 0 20px rgba(232, 168, 56, 0.3);
-        }
+        .glow-hover { transition: all 0.3s ease; }
+        .glow-hover:hover { color: #e8a838; text-shadow: 0 0 20px rgba(232, 168, 56, 0.3); }
 
-        /* Modern Button Styles */
         .btn-primary {
             background: linear-gradient(135deg, #e8a838, #c98f2e);
-            color: #0a0f1a;
-            border: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            color: #0a0f1a; border: none; border-radius: 8px;
+            transition: all 0.3s ease; font-weight: 600; letter-spacing: 0.5px;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
@@ -168,13 +188,9 @@
         }
 
         .btn-outline {
-            background: transparent;
-            color: #e8a838;
-            border: 1.5px solid #e8a838;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            background: transparent; color: #e8a838;
+            border: 1.5px solid #e8a838; border-radius: 8px;
+            transition: all 0.3s ease; font-weight: 600; letter-spacing: 0.5px;
         }
         .btn-outline:hover {
             background: rgba(232, 168, 56, 0.1);
@@ -182,7 +198,6 @@
             box-shadow: 0 8px 30px rgba(232, 168, 56, 0.15);
         }
 
-        /* Card Styles */
         .modern-card {
             background: linear-gradient(145deg, #111827, #0d1420);
             border: 1px solid rgba(232, 168, 56, 0.08);
@@ -195,7 +210,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-        /* Grid Background */
         .grid-bg {
             background-image: 
                 linear-gradient(rgba(232, 168, 56, 0.03) 1px, transparent 1px),
@@ -203,117 +217,74 @@
             background-size: 40px 40px;
         }
 
-        /* Section Reveal */
         .reveal {
-            opacity: 0;
-            transform: translateY(40px);
+            opacity: 0; transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Profile Image Placeholder */
         .profile-avatar {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+            width: 180px; height: 180px; border-radius: 50%;
             background: linear-gradient(135deg, #e8a838, #c98f2e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #0a0f1a;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; color: #0a0f1a;
             border: 4px solid rgba(232, 168, 56, 0.3);
             box-shadow: 0 0 60px rgba(232, 168, 56, 0.15);
         }
 
-        /* Status Badge */
         .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 4px 14px; border-radius: 20px;
+            font-size: 0.75rem; font-weight: 600;
             background: rgba(232, 168, 56, 0.12);
-            color: #e8a838;
-            border: 1px solid rgba(232, 168, 56, 0.15);
+            color: #e8a838; border: 1px solid rgba(232, 168, 56, 0.15);
         }
         .status-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #4ade80;
-            animation: pulse 2s infinite;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: #4ade80; animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-        /* Skill Tags */
         .skill-tag {
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            background: rgba(232, 168, 56, 0.08);
-            color: #c5d1e6;
-            border: 1px solid rgba(232, 168, 56, 0.1);
+            padding: 6px 16px; border-radius: 20px; font-size: 0.8rem;
+            font-weight: 500; background: rgba(232, 168, 56, 0.08);
+            color: #c5d1e6; border: 1px solid rgba(232, 168, 56, 0.1);
             transition: all 0.3s ease;
         }
         .skill-tag:hover {
             background: rgba(232, 168, 56, 0.15);
-            border-color: rgba(232, 168, 56, 0.3);
-            color: #f7c948;
+            border-color: rgba(232, 168, 56, 0.3); color: #f7c948;
         }
 
-        /* Mobile Menu */
         #mobile-menu {
-            background: #0d1420;
-            backdrop-filter: blur(20px);
+            background: #0d1420; backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(232, 168, 56, 0.08);
         }
 
-        /* Social Icon Hover */
-        .social-link {
-            transition: all 0.3s ease;
-            color: #778fc1;
-        }
-        .social-link:hover {
-            color: #e8a838;
-            transform: translateY(-3px);
-        }
+        .social-link { transition: all 0.3s ease; color: #778fc1; }
+        .social-link:hover { color: #e8a838; transform: translateY(-3px); }
 
-        /* Project Card Gradient Overlays */
-        .project-overlay-1 {
-            background: linear-gradient(135deg, #1a2332, #0d1420);
-        }
-        .project-overlay-2 {
-            background: linear-gradient(135deg, #0d1420, #1a2332);
-        }
-        .project-overlay-3 {
-            background: linear-gradient(135deg, #1a1a2e, #0d1420);
-        }
+        .project-overlay-1 { background: linear-gradient(135deg, #1a2332, #0d1420); }
+        .project-overlay-2 { background: linear-gradient(135deg, #0d1420, #1a2332); }
+        .project-overlay-3 { background: linear-gradient(135deg, #1a1a2e, #0d1420); }
 
-        /* Terminal */
-        .terminal {
-            background: #050a12;
-            border: 1px solid rgba(232, 168, 56, 0.08);
-            border-radius: 12px;
+        /* Weather Hub App Card */
+        .app-feature {
+            background: linear-gradient(135deg, #0d1420 0%, #1a2332 100%);
+            border: 1px solid rgba(232, 168, 56, 0.15);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
         }
-        .terminal-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+        .app-feature::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -50%;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle, rgba(232, 168, 56, 0.08) 0%, transparent 70%);
+            pointer-events: none;
         }
-        .terminal-dot-red { background: #ff5f56; }
-        .terminal-dot-yellow { background: #ffbd2e; }
-        .terminal-dot-green { background: #27c93f; }
     </style>
 </head>
 <body>
@@ -322,32 +293,30 @@
     <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
                 <a href="#home" class="font-display font-bold text-xl tracking-tight text-white glow-hover">
                     <span class="gradient-text">Bismarck</span>
                     <span class="text-gray-400 font-light">.</span>
                 </a>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#apps" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Apps</a>
                     <a href="#projects" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
                     <a href="#skills" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Skills</a>
                     <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
                     <a href="#contact" class="btn-primary px-5 py-2 text-sm">Let's Talk</a>
                 </div>
 
-                <!-- Mobile Menu Toggle -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-4 py-4 space-y-3">
                 <a href="#about" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#apps" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">Apps</a>
                 <a href="#projects" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
                 <a href="#skills" onclick="closeMobileMenu()" class="block text-gray-400 hover:text-white transition-colors">Skills</a>
                 <a href="#contact" onclick="closeMobileMenu()" class="block btn-primary text-center px-4 py-2 text-sm">Let's Talk</a>
@@ -357,7 +326,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <!-- Background Elements -->
         <div class="absolute inset-0 grid-bg opacity-30"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#e8a838]/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#e8a838]/3 rounded-full blur-[100px] pointer-events-none"></div>
@@ -365,7 +333,6 @@
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 
-                <!-- Left: Text Content -->
                 <div class="flex-1 text-center lg:text-left">
                     <div class="status-badge mb-6">
                         <span class="status-dot"></span>
@@ -379,41 +346,38 @@
                     
                     <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
                         Co-Founder of <span class="text-white font-semibold">Sonnami Studios</span> · 
-                        Indie Game Developer · Software Engineer · Open-Source Creator
+                        Indie Game Developer · App Creator · Open-Source Contributor
                     </p>
 
                     <p class="text-base text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10">
-                        Crafting immersive gaming experiences and building powerful developer tools. 
-                        I turn complex ideas into polished, playable realities.
+                        From <strong class="text-white">Weather Hub</strong> to immersive games, I craft software 
+                        that solves real problems and delights users. Based in Ghana, building for the world.
                     </p>
 
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <a href="#projects" class="btn-primary px-8 py-3.5 text-base inline-flex items-center gap-2">
-                            <i class="fas fa-gamepad"></i> View My Work
+                        <a href="#apps" class="btn-primary px-8 py-3.5 text-base inline-flex items-center gap-2">
+                            <i class="fas fa-mobile-alt"></i> Get Weather Hub
                         </a>
-                        <a href="#contact" class="btn-outline px-8 py-3.5 text-base inline-flex items-center gap-2">
-                            <i class="fas fa-paper-plane"></i> Get in Touch
+                        <a href="#projects" class="btn-outline px-8 py-3.5 text-base inline-flex items-center gap-2">
+                            <i class="fas fa-gamepad"></i> View My Work
                         </a>
                     </div>
 
-                    <!-- Social Links -->
                     <div class="flex justify-center lg:justify-start gap-5 mt-10">
-                        <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-xl"><i class="fab fa-youtube"></i></a>
-                        <a href="https://sonnamidevs.itch.io" target="_blank" class="social-link text-xl"><i class="fab fa-itch-io"></i></a>
+                        <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-xl" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-xl" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-xl" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://sonnamidevs.itch.io" target="_blank" class="social-link text-xl" aria-label="itch.io"><i class="fab fa-itch-io"></i></a>
                     </div>
                 </div>
 
-                <!-- Right: Profile Image -->
                 <div class="flex-shrink-0">
                     <div class="relative">
                         <div class="profile-avatar">
                             <i class="fas fa-user-circle"></i>
                         </div>
-                        <!-- Decorative rings -->
                         <div class="absolute -inset-4 border-2 border-[#e8a838]/10 rounded-full animate-spin-slow" style="animation-duration: 20s;"></div>
                         <div class="absolute -inset-8 border border-[#e8a838]/5 rounded-full" style="animation-duration: 25s;"></div>
                     </div>
@@ -428,33 +392,35 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 
-                <!-- Left: About Text -->
                 <div class="reveal">
                     <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">About Me</span>
                     <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-6">
-                        Building Worlds,<br>
-                        <span class="gradient-text">One Line of Code at a Time</span>
+                        Building Worlds &<br>
+                        <span class="gradient-text">Apps That Matter</span>
                     </h2>
                     
                     <div class="space-y-4 text-gray-400 leading-relaxed">
                         <p>
                             I'm <strong class="text-white">Bismarck Nana Konadu</strong>, the Co-Founder and Lead Developer at 
-                            <strong class="text-white">Sonnami Studios</strong>. My journey in game development started with a 
-                            fascination for interactive storytelling and systems design.
+                            <strong class="text-white">Sonnami Studios</strong>. A little while back, I was honoured to receive 
+                            the <strong class="text-[#f7c948]">Mid Tech Code Society Best Student Award 2024</strong> — a 
+                            lovely nod to the work I've been pouring into software development.
                         </p>
                         <p>
                             At Sonnami, we create atmospheric games like <strong class="text-white">Neon Drift</strong> and 
                             <strong class="text-white">Echoes of the Void</strong>, blending tight mechanics with immersive 
-                            environments. Beyond games, I build open-source tools like the <strong class="text-white">Sonnami 
-                            YT Downloader</strong> to solve real-world problems.
+                            environments. My latest app, <strong class="text-white">Weather Hub</strong>, brings accurate, 
+                            minimal weather forecasting to Ghana and beyond.
                         </p>
                         <p>
-                            I believe in clean code, thoughtful design, and pushing the boundaries of what indie studios can achieve. 
-                            When I'm not coding, you'll find me exploring new game mechanics or contributing to open-source projects.
+                            I believe in clean code, thoughtful design, and pushing the boundaries of what African developers 
+                            can build. When I'm not coding, you'll find me exploring new game mechanics or contributing to 
+                            open-source projects.
                         </p>
                     </div>
 
                     <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="skill-tag"><i class="fas fa-code mr-1.5 text-[#e8a838]"></i> Flutter & Dart</span>
                         <span class="skill-tag"><i class="fas fa-code mr-1.5 text-[#e8a838]"></i> Unity & C#</span>
                         <span class="skill-tag"><i class="fas fa-cube mr-1.5 text-[#e8a838]"></i> Unreal Engine 5</span>
                         <span class="skill-tag"><i class="fab fa-python mr-1.5 text-[#e8a838]"></i> Python</span>
@@ -462,7 +428,6 @@
                     </div>
                 </div>
 
-                <!-- Right: Quick Info Cards -->
                 <div class="reveal" style="transition-delay: 150ms;">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="modern-card p-6">
@@ -476,9 +441,9 @@
                             <p class="text-gray-500 text-sm">Full-Stack & Game Dev</p>
                         </div>
                         <div class="modern-card p-6">
-                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-clock"></i></div>
-                            <h3 class="text-white font-semibold text-sm">Experience</h3>
-                            <p class="text-gray-500 text-sm">5+ Years in Development</p>
+                            <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-mobile-alt"></i></div>
+                            <h3 class="text-white font-semibold text-sm">App Creator</h3>
+                            <p class="text-gray-500 text-sm">Weather Hub</p>
                         </div>
                         <div class="modern-card p-6">
                             <div class="text-[#e8a838] text-2xl mb-3"><i class="fas fa-globe"></i></div>
@@ -487,10 +452,9 @@
                         </div>
                     </div>
 
-                    <!-- Quote -->
                     <div class="mt-6 p-6 rounded-xl border border-[#e8a838]/10 bg-[#e8a838]/5">
                         <p class="text-gray-400 italic text-sm leading-relaxed">
-                            "I believe great games are born from the perfect intersection of 
+                            "I believe great software is born from the perfect intersection of 
                             technical mastery and creative vision."
                         </p>
                         <p class="text-[#e8a838] text-xs font-semibold mt-2">— Bismarck Nana Konadu</p>
@@ -501,8 +465,130 @@
         </div>
     </section>
 
+    <!-- ===================== APPS SECTION ===================== -->
+    <section id="apps" class="py-20 lg:py-28 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Mobile Apps</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">
+                    Apps by <span class="gradient-text">Sonnami Develops</span>
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-3">
+                    Download my apps directly — no app store required. 100% free, no ads, no tracking.
+                </p>
+            </div>
+
+            <!-- Weather Hub Featured App -->
+            <div class="app-feature p-8 lg:p-12 reveal">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left: App Info -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#4FC3F7] to-[#0288D1] flex items-center justify-center shadow-lg">
+                                <i class="fas fa-cloud-sun text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <span class="status-badge text-xs">Latest Version</span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-display font-bold text-3xl sm:text-4xl text-white mb-3">
+                            Weather Hub
+                        </h3>
+                        <p class="text-[#e8a838] text-sm font-semibold mb-4">
+                            <i class="fas fa-mobile-alt mr-2"></i>Android · by Sonnami Develops
+                        </p>
+
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            A minimal, accurate weather app built for Ghana and the world. Powered by 
+                            Open-Meteo's multi-model ensemble and OpenWeatherMap for pinpoint local accuracy. 
+                            Features a 5-day forecast, hourly updates, health tips, and daily inspiration.
+                        </p>
+
+                        <!-- Feature List -->
+                        <div class="grid grid-cols-2 gap-3 mb-8">
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> 5-Day Forecast
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> Health Tips
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> Smart Alerts
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> Dark & Light Mode
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> Daily Delight
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-400">
+                                <i class="fas fa-check-circle text-[#4ade80]"></i> No Ads Ever
+                            </div>
+                        </div>
+
+                        <!-- Download Button -->
+                        <div class="flex flex-wrap gap-4">
+                            <button 
+                                id="downloadWeatherHubBtn"
+                                class="btn-primary px-8 py-4 text-base inline-flex items-center gap-3">
+                                <i class="fas fa-download text-lg"></i>
+                                Download for Android
+                            </button>
+                            <a href="https://github.com/sonnamidevs/sonnamidevs.github.io" target="_blank" 
+                                class="btn-outline px-8 py-4 text-base inline-flex items-center gap-2">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                        </div>
+
+                        <p class="text-xs text-gray-600 mt-4">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            Android 5.0+ · ~15 MB · Free forever
+                        </p>
+                    </div>
+
+                    <!-- Right: Phone Mockup Preview -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <div class="w-64 h-[500px] rounded-[2.5rem] border-4 border-gray-700 bg-black p-2 shadow-2xl" style="box-shadow: 0 25px 80px rgba(232, 168, 56, 0.15);">
+                                <div class="w-full h-full rounded-[2rem] bg-gradient-to-b from-[#1A1A2E] to-[#121212] flex flex-col items-center justify-center p-4">
+                                    <i class="fas fa-cloud-sun text-[#4FC3F7] text-6xl mb-4"></i>
+                                    <p class="text-gray-400 text-xs tracking-widest mb-2">ACCRA</p>
+                                    <p class="text-white text-5xl font-thin">28°</p>
+                                    <p class="text-[#4FC3F7] text-xs tracking-wider mt-2">CLEAR</p>
+                                    <div class="w-full mt-6 grid grid-cols-3 gap-2 text-center">
+                                        <div>
+                                            <i class="fas fa-water text-gray-600 text-xs"></i>
+                                            <p class="text-gray-500 text-xs mt-1">Humidity</p>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-wind text-gray-600 text-xs"></i>
+                                            <p class="text-gray-500 text-xs mt-1">Wind</p>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-temperature-high text-gray-600 text-xs"></i>
+                                            <p class="text-gray-500 text-xs mt-1">Feels</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-[#e8a838]/10 blur-2xl"></div>
+                            <div class="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-[#4FC3F7]/10 blur-2xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Success Message -->
+            <div id="downloadMessage" class="hidden mt-6 max-w-2xl mx-auto p-4 rounded-xl bg-[#4ade80]/10 border border-[#4ade80]/30 text-[#4ade80] text-sm text-center">
+                <i class="fas fa-check-circle mr-2"></i> Download started! Check your notifications to install Weather Hub.
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-20 lg:py-28 bg-dark relative">
+    <section id="projects" class="py-20 lg:py-28 bg-card/20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Portfolio</span>
@@ -585,7 +671,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 lg:py-28 bg-card/20 relative">
+    <section id="skills" class="py-20 lg:py-28 bg-dark relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
@@ -595,11 +681,20 @@
                         Tech Stack & <span class="gradient-text">Skills</span>
                     </h2>
                     <p class="text-gray-400 leading-relaxed mb-8">
-                        I work across the full development spectrum — from game engines to backend systems. 
+                        I work across the full development spectrum — from game engines to mobile apps and backend systems. 
                         Here are the tools and technologies I'm most proficient with.
                     </p>
                     
                     <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-white">Flutter & Dart</span>
+                                <span class="text-[#e8a838]">88%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
                         <div>
                             <div class="flex justify-between text-sm font-medium mb-1.5">
                                 <span class="text-white">Unity & C#</span>
@@ -627,20 +722,15 @@
                                 <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex justify-between text-sm font-medium mb-1.5">
-                                <span class="text-white">Game Design & Mechanics</span>
-                                <span class="text-[#e8a838]">80%</span>
-                            </div>
-                            <div class="w-full bg-white/5 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-[#e8a838] to-[#f7c948] h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="reveal" style="transition-delay: 150ms;">
                     <div class="grid grid-cols-2 gap-4">
+                        <div class="modern-card p-5 text-center">
+                            <i class="fas fa-mobile-alt text-3xl text-white/60 mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Flutter</span>
+                        </div>
                         <div class="modern-card p-5 text-center">
                             <i class="fab fa-unity text-3xl text-white/60 mb-2 block"></i>
                             <span class="text-sm font-medium text-white">Unity</span>
@@ -655,7 +745,7 @@
                         </div>
                         <div class="modern-card p-5 text-center">
                             <i class="fab fa-git-alt text-3xl text-white/60 mb-2 block"></i>
-                            <span class="text-sm font-medium text-white">Git</span>
+                            <span class="text-sm font-medium text-white">Git & CI/CD</span>
                         </div>
                         <div class="modern-card p-5 text-center">
                             <i class="fas fa-code text-3xl text-white/60 mb-2 block"></i>
@@ -669,10 +759,6 @@
                             <i class="fas fa-database text-3xl text-white/60 mb-2 block"></i>
                             <span class="text-sm font-medium text-white">SQL</span>
                         </div>
-                        <div class="modern-card p-5 text-center">
-                            <i class="fas fa-music text-3xl text-white/60 mb-2 block"></i>
-                            <span class="text-sm font-medium text-white">FMOD / Audio</span>
-                        </div>
                     </div>
                 </div>
 
@@ -681,7 +767,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 lg:py-28 bg-dark relative">
+    <section id="contact" class="py-20 lg:py-28 bg-card/20 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 reveal">
                 <span class="text-[#e8a838] text-sm font-semibold tracking-wider uppercase">Connect</span>
@@ -692,7 +778,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Contact Info -->
                 <div class="space-y-6 reveal" style="transition-delay: 100ms;">
                     <div class="modern-card p-6 flex items-start gap-4">
                         <div class="text-[#e8a838] text-xl mt-1"><i class="fab fa-whatsapp"></i></div>
@@ -724,7 +809,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="modern-card p-6 reveal" style="transition-delay: 200ms;">
                     <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
                         <div>
@@ -762,11 +846,11 @@
                     Bismarck<span class="text-[#e8a838]">.</span>
                 </div>
                 <div class="flex gap-6">
-                    <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-sm"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/sonnamidevs" target="_blank" class="social-link text-sm" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/sonnamidevs" target="_blank" class="social-link text-sm" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sonnamidevs" target="_blank" class="social-link text-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/sonnamidevs" target="_blank" class="social-link text-sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@sonnamidevs" target="_blank" class="social-link text-sm" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
                 <p class="text-gray-600 text-sm">&copy; <span id="year"></span> Bismarck Nana Konadu</p>
             </div>
@@ -780,23 +864,14 @@
         // Mobile Menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        function closeMobileMenu() {
-            mobileMenu.classList.add('hidden');
-        }
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        function closeMobileMenu() { mobileMenu.classList.add('hidden'); }
 
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg', 'bg-dark/95');
-            } else {
-                navbar.classList.remove('shadow-lg', 'bg-dark/95');
-            }
+            if (window.scrollY > 50) navbar.classList.add('shadow-lg', 'bg-dark/95');
+            else navbar.classList.remove('shadow-lg', 'bg-dark/95');
         });
 
         // Scroll Reveal
@@ -804,17 +879,44 @@
             const reveals = document.querySelectorAll('.reveal');
             const windowHeight = window.innerHeight;
             const visible = 120;
-
             reveals.forEach(el => {
                 const top = el.getBoundingClientRect().top;
-                if (top < windowHeight - visible) {
-                    el.classList.add('active');
-                }
+                if (top < windowHeight - visible) el.classList.add('active');
             });
         }
-
         window.addEventListener('scroll', revealSections);
         window.addEventListener('load', revealSections);
+
+        // ===================== WEATHER HUB DOWNLOAD =====================
+        const WEATHER_HUB_URL = 'https://github.com/sonnamidevs/sonnamidevs.github.io/releases/latest/download/app-release.apk';
+
+        document.getElementById('downloadWeatherHubBtn').addEventListener('click', function() {
+            const btn = this;
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin text-lg"></i> Preparing download...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = WEATHER_HUB_URL;
+                link.download = 'WeatherHub.apk';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                const msg = document.getElementById('downloadMessage');
+                msg.classList.remove('hidden');
+                
+                btn.innerHTML = '<i class="fas fa-check text-lg"></i> Download Started!';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                    msg.classList.add('hidden');
+                }, 5000);
+            }, 600);
+        });
 
         // Contact Form Handler
         function handleContactSubmit(e) {
@@ -829,26 +931,23 @@
                 btn.disabled = false;
                 document.getElementById('contactSuccess').classList.remove('hidden');
                 e.target.reset();
-                
                 setTimeout(() => {
                     document.getElementById('contactSuccess').classList.add('hidden');
                 }, 5000);
             }, 1500);
         }
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
                 if (targetId.startsWith('#') && targetId.length > 1) {
                     e.preventDefault();
                     const target = document.querySelector(targetId);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
     </script>
 </body>
-</html>
+            </html>
